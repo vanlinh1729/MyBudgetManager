@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{161A0B6C-3CEE-4D9D-B9C1-104F278827E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{F07265C9-671D-4273-AFE9-45E3EF6D095F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{A0E34C75-73B2-48EB-94BA-80CC8418BDBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBudgetManagement.Domain", "MyBudgetManagement.Domain\MyBudgetManagement.Domain.csproj", "{AF57074F-A170-4090-BBA7-3005DFC5084C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBudgetManagement.Infrastructure", "MyBudgetManagement.Infrastructure\MyBudgetManagement.Infrastructure.csproj", "{885940E7-8F24-46B5-A290-835B4ACE5E3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBudgetManagement.Application", "MyBudgetManagement.Application\MyBudgetManagement.Application.csproj", "{B2B8400A-1AD8-494F-8FEE-5E56E860F5FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{1E411FA1-82D2-4D30-A6E1-530263ED1CA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBudgetManagement.API", "MyBudgetManagement.API\MyBudgetManagement.API.csproj", "{BDE361D9-27E8-4B9A-A8BC-775DF958B897}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AF57074F-A170-4090-BBA7-3005DFC5084C} = {161A0B6C-3CEE-4D9D-B9C1-104F278827E4}
+		{885940E7-8F24-46B5-A290-835B4ACE5E3C} = {A0E34C75-73B2-48EB-94BA-80CC8418BDBF}
+		{B2B8400A-1AD8-494F-8FEE-5E56E860F5FD} = {F07265C9-671D-4273-AFE9-45E3EF6D095F}
+		{BDE361D9-27E8-4B9A-A8BC-775DF958B897} = {1E411FA1-82D2-4D30-A6E1-530263ED1CA8}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF57074F-A170-4090-BBA7-3005DFC5084C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF57074F-A170-4090-BBA7-3005DFC5084C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF57074F-A170-4090-BBA7-3005DFC5084C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF57074F-A170-4090-BBA7-3005DFC5084C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{885940E7-8F24-46B5-A290-835B4ACE5E3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{885940E7-8F24-46B5-A290-835B4ACE5E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{885940E7-8F24-46B5-A290-835B4ACE5E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{885940E7-8F24-46B5-A290-835B4ACE5E3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2B8400A-1AD8-494F-8FEE-5E56E860F5FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2B8400A-1AD8-494F-8FEE-5E56E860F5FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2B8400A-1AD8-494F-8FEE-5E56E860F5FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2B8400A-1AD8-494F-8FEE-5E56E860F5FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDE361D9-27E8-4B9A-A8BC-775DF958B897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDE361D9-27E8-4B9A-A8BC-775DF958B897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDE361D9-27E8-4B9A-A8BC-775DF958B897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDE361D9-27E8-4B9A-A8BC-775DF958B897}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
