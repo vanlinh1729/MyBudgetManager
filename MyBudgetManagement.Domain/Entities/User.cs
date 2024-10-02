@@ -15,4 +15,5 @@ public class User : AuditableBaseEntity
     public virtual AccountProfile AccountProfile { get; set; } //1 user co 1 accountProfile
     public virtual Role Role { get; set; } // 1user co 1 role
     public virtual UserBalance UserBalance { get; set; } // 1user co 1 role
+    public virtual ICollection<GroupMember> GroupMembers { get; set; } = new List<GroupMember>();
 }
