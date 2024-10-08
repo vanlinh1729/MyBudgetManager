@@ -9,7 +9,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e70224e3-2a35-4c9d-a03f-d50d21743ac5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/ServiceExtentions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/IGenericRepositoryAsync.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IAccountProfileRepositoryAsync.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/ICategoryRepositoryAsync.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IGroupMemberRepositoryAsync.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IGroupRepositoryAsync.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IGroupTransactionRepositoryAsync.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IRoleRepositoryAsync.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/ITransactionRepositoryAsync.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IUserBalanceRepositoryAsync.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IUserRepositoryAsync.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/ServiceExtentions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/MyBudgetManagement.Persistance.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/ServiceExtentions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/MyBudgetManagement.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/MyBudgetManagement.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/MyBudgetManagement.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/MyBudgetManagement.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/MyBudgetManagement.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/MyBudgetManagement.Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/MyBudgetManagement.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/MyBudgetManagement.Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +39,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Domain/Enums/Currencies.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Domain/Enums/Gender.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Persistance/ServiceExtentions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/95bbc9693c5149deb5e873d6726056cdec00/c6/f3701e5f/DescriptionAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d42e0f8caefc46588c255e232c1414bbc29200/21/bfae387d/IEnumerable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d42e0f8caefc46588c255e232c1414bbc29200/37/3d38f2d7/IEnumerable`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d42e0f8caefc46588c255e232c1414bbc29200/8d/b115eb32/IEnumerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e48d22d5dbe84fb88e3a03496b106db49600/c4/37eda65f/ExpressionStarter`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -33,27 +58,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.MyBudgetManagement.API: http.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.6013986",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.MyBudgetManagement.API: http.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.6013986&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/linhnguyen/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
-      "/Users/linhnguyen/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache",
-      "/Users/linhnguyen/Library/Application Support/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/linhnguyen/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/linhnguyen/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
+      &quot;/Users/linhnguyen/Library/Application Support/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.MyBudgetManagement.API: http">
     <configuration name="MyBudgetManagement.API: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/MyBudgetManagement.API/MyBudgetManagement.API.csproj" />
@@ -97,6 +122,9 @@
       <workItem from="1727696536432" duration="313000" />
       <workItem from="1727701182233" duration="5783000" />
       <workItem from="1727811092454" duration="5455000" />
+      <workItem from="1727871895319" duration="10637000" />
+      <workItem from="1728036429895" duration="2743000" />
+      <workItem from="1728406211094" duration="1977000" />
     </task>
     <servers />
   </component>

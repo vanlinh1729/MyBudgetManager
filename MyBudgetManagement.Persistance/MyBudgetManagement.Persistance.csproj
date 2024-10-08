@@ -4,10 +4,11 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <RootNamespace>MyBudgetManagement.Persistence</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MyBudgetManagement.Domain\MyBudgetManagement.Domain.csproj" />
+      <ProjectReference Include="..\MyBudgetManagement.Application\MyBudgetManagement.Application.csproj" />
     </ItemGroup>
 
     <ItemGroup>
