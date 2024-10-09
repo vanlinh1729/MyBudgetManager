@@ -1,6 +1,6 @@
 using MyBudgetManagement.Application;
 using MyBudgetManagement.Infrastructure;
-using MyBudgetManagement.Persistence;
+using MyBudgetManagement.Persistance;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure();
-builder.Services.AddPersistance();
+builder.Services.AddPersistance(builder.Configuration);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
