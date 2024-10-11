@@ -4,7 +4,7 @@ using MyBudgetManagement.Application.Features.Users.Queries;
 
 namespace MyBudgetManagement.API.Controllers;
 
-[Route("/api/[controller]")]
+[Route("/api/users")]
 [ApiController]
 public class UserController : ControllerBase
 {
@@ -18,6 +18,12 @@ public class UserController : ControllerBase
     public async Task<IActionResult> GetAllUsers()
     {
         var result = await _mediator.Send(new GetAllUserQuery());
+        return Ok(result);
+    } 
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetUserById(Guid id)
+    {
+        var result = await _mediator.Send(new GetUserByIdQuery {Id = id} );
         return Ok(result);
     }
 }

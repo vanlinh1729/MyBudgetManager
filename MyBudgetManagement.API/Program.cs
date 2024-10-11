@@ -1,6 +1,8 @@
+using Microsoft.OpenApi.Models;
 using MyBudgetManagement.Application;
 using MyBudgetManagement.Infrastructure;
 using MyBudgetManagement.Persistance;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +10,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo()
+    {
+        Title = "MyBudgetManagement API",
+        Version = "v1",
+        Description = "API for managing budgets"
+    });
+});
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure();
 builder.Services.AddPersistance(builder.Configuration);

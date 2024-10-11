@@ -15,4 +15,5 @@ public interface IApplicationDbContext
     DbSet<Group> Groups { get; set; }
     DbSet<Category> Categories { get; set; }
     DbSet<AccountProfile> AccountProfiles { get; set; }
+    Task<int> SaveChangesAsync();
 }

@@ -13,17 +13,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e70224e3-2a35-4c9d-a03f-d50d21743ac5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Interfaces/IApplicationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Context/ApplicationDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/AccountProfileController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Exceptions/ApiException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/AccountProfiles/Commands/CreateAccountProfileCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Queries/GetUserByIdQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Mappings/MappingProfile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Wrappers/ApiResponse.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/UserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/MyBudgetManagement.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/MyBudgetManagement.API.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Commands/CreateUserCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Commands/CreateUserCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Queries/GetAllUserQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Queries/GetAllUserQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Interfaces/IApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Interfaces/IApplicationDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/MyBudgetManagement.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/MyBudgetManagement.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/MyBudgetManagement.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/MyBudgetManagement.Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/MyBudgetManagement.Persistance.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/MyBudgetManagement.Persistance.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/ServiceExtentions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/ServiceExtentions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/ServiceExtentions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/ServiceExtentions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Context/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Context/ApplicationDbContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,13 +39,19 @@
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Domain/Enums/Currencies.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Domain/Enums/Gender.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Persistance/ServiceExtentions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebAPI/Controllers/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebAPI/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4cb11fe6437442bcb740e5d3093ee82c10110/92/9b697153/OpenApiEndpointConventionBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/95bbc9693c5149deb5e873d6726056cdec00/c6/f3701e5f/DescriptionAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9762d0dfd8b94fc9b8ab9b4aa102485328f220/90/06b60350/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9762d0dfd8b94fc9b8ab9b4aa102485328f220/9c/444d9ab3/EntityFrameworkQueryableExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c18e43e055cc4202a3aa0d39f9d042c816930/42/ebc427d0/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d42e0f8caefc46588c255e232c1414bbc29200/21/bfae387d/IEnumerable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d42e0f8caefc46588c255e232c1414bbc29200/37/3d38f2d7/IEnumerable`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d42e0f8caefc46588c255e232c1414bbc29200/74/db0908da/DateOnly.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d42e0f8caefc46588c255e232c1414bbc29200/8d/b115eb32/IEnumerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d42e0f8caefc46588c255e232c1414bbc29200/a9/c6753b80/Assembly.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e48d22d5dbe84fb88e3a03496b106db49600/c4/37eda65f/ExpressionStarter`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a13a23687b565d3b3ca279dd8e2bfd1d74d49132851d9dcc489eaad1431ff/ServiceCollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ec45a28378face7b514e17aad8fd31f6121afe58f1719b3d92de706684acf4/ServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -58,28 +69,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.MyBudgetManagement.API: http.executor": "Debug",
-    ".NET Launch Settings Profile.MyBudgetManagement.WebAPI: http.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.76221496",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.MyBudgetManagement.API: http.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.MyBudgetManagement.WebAPI: http.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.66101694&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/linhnguyen/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
-      "/Users/linhnguyen/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache",
-      "/Users/linhnguyen/Library/Application Support/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/linhnguyen/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/linhnguyen/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
+      &quot;/Users/linhnguyen/Library/Application Support/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.MyBudgetManagement.API: http">
     <configuration name="MyBudgetManagement.API: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/MyBudgetManagement.API/MyBudgetManagement.API.csproj" />
@@ -187,7 +198,8 @@
       <workItem from="1728036429895" duration="2743000" />
       <workItem from="1728406211094" duration="3548000" />
       <workItem from="1728411795220" duration="745000" />
-      <workItem from="1728473625294" duration="7545000" />
+      <workItem from="1728473625294" duration="22663000" />
+      <workItem from="1728622297538" duration="337000" />
     </task>
     <servers />
   </component>
@@ -213,56 +225,43 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Queries/GetAllUserQuery.cs</url>
-          <line>20</line>
-          <properties documentPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Queries/GetAllUserQuery.cs" containingFunctionPresentation="Method 'Handle'">
+          <url>file://$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Queries/GetUserByIdQuery.cs</url>
+          <line>24</line>
+          <properties documentPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Queries/GetUserByIdQuery.cs" containingFunctionPresentation="Method 'Handle'">
             <startOffsets>
-              <option value="757" />
+              <option value="921" />
             </startOffsets>
             <endOffsets>
-              <option value="773" />
+              <option value="940" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/MyBudgetManagement.API/Controllers/UserController.cs</url>
-          <line>20</line>
-          <properties documentPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/UserController.cs" containingFunctionPresentation="Method 'GetAllUsers'">
+          <url>file://$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Queries/GetUserByIdQuery.cs</url>
+          <line>29</line>
+          <properties documentPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Queries/GetUserByIdQuery.cs" containingFunctionPresentation="Method 'Handle'">
             <startOffsets>
-              <option value="524" />
+              <option value="1059" />
             </startOffsets>
             <endOffsets>
-              <option value="542" />
+              <option value="1125" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/MyBudgetManagement.API/Controllers/UserController.cs</url>
-          <line>19</line>
-          <properties documentPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/UserController.cs" containingFunctionPresentation="Method 'GetAllUsers'">
+          <url>file://$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Queries/GetUserByIdQuery.cs</url>
+          <line>23</line>
+          <properties documentPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Queries/GetUserByIdQuery.cs" containingFunctionPresentation="Method 'Handle'">
             <startOffsets>
-              <option value="458" />
+              <option value="821" />
             </startOffsets>
             <endOffsets>
-              <option value="515" />
+              <option value="908" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Queries/GetAllUserQuery.cs</url>
-          <line>19</line>
-          <properties documentPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Queries/GetAllUserQuery.cs" containingFunctionPresentation="Method 'Handle'">
-            <startOffsets>
-              <option value="677" />
-            </startOffsets>
-            <endOffsets>
-              <option value="744" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -18,4 +18,9 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
     public DbSet<Group> Groups { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<AccountProfile> AccountProfiles { get; set; }
+
+    public async Task<int> SaveChangesAsync()
+    {
+        return await base.SaveChangesAsync();
+    }
 }
