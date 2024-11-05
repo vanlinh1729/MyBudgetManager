@@ -7,7 +7,7 @@ public class AccountProfile : AuditableBaseEntity
 {
     public Guid UserId { get; set; }
     public DateTime? DateOfBirth { get; set; }
-    public string? Avatar { get; set; }
+    public string? Avatar { get; set; } 
     public string? Address { get; set; }
     public Gender Gender { get; set; }
     public Currencies Currency { get; set; } = Currencies.VND;

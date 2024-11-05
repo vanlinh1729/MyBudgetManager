@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{BDE361D9-27E8-4B9A-A8BC-775DF958B897}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyBudgetManagement.Application/Features/AccountProfiles/Commands/CreateAccountProfileCommand.cs">
+    <Files>
+      <File FileName="MyBudgetManagement.Application/Features/AccountProfiles/Commands/CreateAccountProfileCommand.cs" Line="51" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MyBudgetManagement" expanded="True">
+            <Node name="Application" expanded="True">
+              <Node name="MyBudgetManagement.Application" expanded="True">
+                <Node name="Features" expanded="True">
+                  <Node name="AccountProfiles" expanded="True">
+                    <Node name="Commands" expanded="True">
+                      <Node name="CreateAccountProfileCommand.cs" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+            <Node name="Domain" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Presentation.MyBudgetManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+</Properties>
