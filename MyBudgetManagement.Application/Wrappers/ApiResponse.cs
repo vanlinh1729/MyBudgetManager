@@ -17,7 +17,7 @@ public class ApiResponse<T>
     //failed response
     public ApiResponse(string message)
     {
-        Succecced = false;
+        Succecced = true;
         Message = message;
     }
 

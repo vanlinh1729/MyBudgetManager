@@ -2,7 +2,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MyBudgetManagement.Application.Interfaces;
+using MyBudgetManagement.Domain.Entities;
+using MyBudgetManagement.Domain.Interfaces;
 using MyBudgetManagement.Persistance.Context;
+using MyBudgetManagement.Persistance.Repositories;
 
 namespace MyBudgetManagement.Persistance;
 
@@ -15,6 +18,13 @@ public static class ServiceExtentions
             configuration.GetConnectionString("DefaultConnection")
             ));
 
+        
         services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
+        services.AddScoped<IUserRepositoryAsync, UserRepository>();  
+        services.AddScoped<IUserBalanceRepositoryAsync, UserBalanceRepository>();  
+        services.AddScoped<IAccountProfileRepositoryAsync, AccountProfileRepository>();  
+        services.AddScoped<IRoleRepositoryAsync, RoleRepository>();  
+        services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();  
+        
     }
 }

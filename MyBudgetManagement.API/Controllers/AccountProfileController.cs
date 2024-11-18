@@ -1,10 +1,12 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using MyBudgetManagement.Application.Features.AccountProfiles.Commands;
 
 namespace MyBudgetManagement.API.Controllers;
 
+[Authorize(Roles = "User")]
 [ApiController]
 [Route("/api/accountprofiles")]
 public class AccountProfileController : ControllerBase
@@ -16,6 +18,7 @@ public class AccountProfileController : ControllerBase
         _mediator = mediator;
     }
 
+    
     [HttpPost]
     public async Task<IActionResult> CreateAccountProfile(CreateAccountProfileCommand createAccountProfile, CancellationToken cancellationToken)
     {

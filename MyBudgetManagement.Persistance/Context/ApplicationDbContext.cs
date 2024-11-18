@@ -8,7 +8,9 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
+        
     }
+
     public DbSet<User> Users { get; set; }
     public DbSet<UserBalance> UserBalances { get; set; }
     public DbSet<Transaction> Transactions { get; set; }
@@ -18,6 +20,7 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
     public DbSet<Group> Groups { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<AccountProfile> AccountProfiles { get; set; }
+    public DbSet<RefreshToken> RefreshTokens { get; set; }
 
     public async Task<int> SaveChangesAsync()
     {

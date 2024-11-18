@@ -10,6 +10,7 @@ public class User : AuditableBaseEntity
     public string PasswordHash { get; set; } = string.Empty;
     public string FirstName { get; set; }
     public string LastName { get; set; }
+    public Guid RoleId { get; set; }
     
     //nav props
     public virtual AccountProfile AccountProfile { get; set; } //1 user co 1 accountProfile
