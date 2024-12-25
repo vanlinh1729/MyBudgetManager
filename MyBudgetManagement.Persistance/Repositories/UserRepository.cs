@@ -29,7 +29,7 @@ public class UserRepository : GenericRepository<User>, IUserRepositoryAsync
             .Include(u=>u.UserBalance)
             .FirstOrDefaultAsync(u => u.Email == email );
         // Check if user exists and verify password
-        if (user == null || !BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
+        if (user == null || !BCryptHelper.VerifyPassword(password, user.PasswordHash))
             return null;
         return user;
     }
