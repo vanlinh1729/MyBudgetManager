@@ -14,6 +14,8 @@ public static class ServiceExtentions
     {
         //add services
         services.AddScoped<IJwtProvider, JwtProvider>();  
+        services.AddScoped<IDataSeeder, DataSeeder>();
+
         services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

@@ -13,5 +13,5 @@ public class AccountProfile : AuditableBaseEntity
     public Currencies Currency { get; set; } = Currencies.VND;
     
     //Nav props
-    public User User { get; set; }
+    public User User { get; set; } // 1 user co 1 accountprofile
 }

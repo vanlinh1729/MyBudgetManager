@@ -11,6 +11,7 @@ public class GroupTransaction : AuditableBaseEntity
     public string Description { get; set; }
     public string? Image { get; set; }
     public TransactionType Type { get; set; }
+    public TransactionStatus Status { get; set; }
 
     public virtual Group Group { get; set; }
 }

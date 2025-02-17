@@ -26,18 +26,23 @@ public class RefreshTokenRepository : IRefreshTokenRepository
         _context.RefreshTokens.Add(token);
         await _context.SaveChangesAsync();
     }
-
-    public async Task RevokeToken(Guid userId)
+    
+    public async Task<bool> RevokeToken(Guid userId, CancellationToken cancellationToken = default)
     {
         var oldRefreshToken = await _context.RefreshTokens
-            .FirstOrDefaultAsync(rt => rt.UserId == userId && rt.RevokedAt == null && rt.ExpiryDate > DateTime.UtcNow);
+            .FirstOrDefaultAsync(rt => rt.UserId == userId && rt.RevokedAt == null && rt.ExpiryDate > DateTime.UtcNow, cancellationToken);
 
-        if (oldRefreshToken != null)
+        if (oldRefreshToken == null)
         {
-                oldRefreshToken.RevokedAt = DateTime.UtcNow;
-                await _context.SaveChangesAsync();
+            return false; // Không có token hợp lệ để thu hồi
         }
+
+        oldRefreshToken.RevokedAt = DateTime.UtcNow;
+        await _context.SaveChangesAsync(cancellationToken);
+
+        return true; // Thu hồi thành công
     }
+
 
     public async Task<string> RevokeAndGenerateNewRefreshTokenAsync(Guid userId)
     {
@@ -64,7 +69,12 @@ public class RefreshTokenRepository : IRefreshTokenRepository
             throw new UnauthorizedAccessException("Expired refresh token");
         
         // Logic to create a new access token here
-        var user = await _context.Users.Include(u=>u.Role).Include(u=>u.UserBalance).FirstOrDefaultAsync(u => u.Id == refreshToken.UserId);
+        var user = refreshToken.User ?? 
+                   await _context.Users
+                       .Include(u => u.UserRoles)
+                       .ThenInclude(ur => ur.Role)
+                       .Include(u => u.UserBalance)
+                       .SingleOrDefaultAsync(u => u.Id == refreshToken.UserId);
         var newAccessToken = _jwtProvider.GenerateToken(user); // Placeholder
 
         return newAccessToken;

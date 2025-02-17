@@ -9,16 +9,11 @@ using Serilog.Formatting.Json;
 using Serilog.Sinks.File;
 
 Log.Logger = new LoggerConfiguration()
-#if DEBUG
-    .MinimumLevel.Debug()
-#else
-            .MinimumLevel.Information()
-#endif
     .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
     .MinimumLevel.Override("Microsoft.EntityFrameworkCore", LogEventLevel.Warning)
     .Enrich.FromLogContext()
-    .WriteTo.Sink(new FileSink("Logs/logs.txt", new JsonFormatter(), long.MaxValue, Encoding.Default))
     .WriteTo.Console()
+    .WriteTo.Sink(new FileSink("Logs/logs.txt", new JsonFormatter(), long.MaxValue, Encoding.Default))
     .CreateLogger();
 
 try
@@ -26,19 +21,20 @@ try
     Log.Information("Starting web host.");
     var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+    // Register services in the container
     builder.Services.AddControllers();
     builder.Services.AddEndpointsApiExplorer();
-    builder.Services.AddSwaggerGen(c =>
+    builder.Services.AddSwaggerGen(options =>
     {
-        c.SwaggerDoc("v1", new OpenApiInfo
+        options.SwaggerDoc("v1", new OpenApiInfo
         {
             Title = "MyBudgetManagement API",
             Version = "v1",
             Description = "API for managing budgets"
         });
-        c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+
+        // Swagger Authorization configuration
+        options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
         {
             Name = "Authorization",
             Type = SecuritySchemeType.Http,
@@ -48,7 +44,7 @@ try
             Description = "JWT Authorization header using the Bearer scheme. Example: \"Bearer {token}\""
         });
 
-        c.AddSecurityRequirement(new OpenApiSecurityRequirement
+        options.AddSecurityRequirement(new OpenApiSecurityRequirement
         {
             {
                 new OpenApiSecurityScheme
@@ -63,14 +59,19 @@ try
             }
         });
     });
+
+    // Application, Infrastructure, and Persistence registration
     builder.Services.AddApplication();
     builder.Services.AddInfrastructure(builder.Configuration);
     builder.Services.AddPersistance(builder.Configuration);
+
     builder.Host.UseSerilog();
 
     var app = builder.Build();
-// app.UseMiddleware<JwtTokenMiddleware>();
-// Configure the HTTP request pipeline.
+
+   
+
+    // Configure the HTTP request pipeline
     if (app.Environment.IsDevelopment())
     {
         app.UseSwagger();
@@ -81,6 +82,9 @@ try
     app.UseAuthorization();
     app.UseHttpsRedirection();
     app.MapControllers();
+    
+    // Seed data asynchronously
+    await SeedDataAsync(app);
     await app.RunAsync();
     return 1;
 }
@@ -94,4 +98,22 @@ catch (Exception ex)
 finally
 {
     Log.CloseAndFlush();
+}
+
+async Task SeedDataAsync(WebApplication app)
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var services = scope.ServiceProvider;
+        try
+        {
+            var seeder = services.GetRequiredService<IDataSeeder>();
+            await seeder.SeedAsync();
+            Log.Information("Data seeded successfully.");
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, "An error occurred while seeding the database.");
+        }
+    }
 }

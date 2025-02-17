@@ -25,13 +25,24 @@ public class UserRepository : GenericRepository<User>, IUserRepositoryAsync
     public async Task<User?> UserLogin(string email, string password)
     {
         var user = await _context.Users
-            .Include(u=>u.Role)
-            .Include(u=>u.UserBalance)
-            .FirstOrDefaultAsync(u => u.Email == email );
+            .Include(u => u.UserRoles)
+            .ThenInclude(ur => ur.Role)
+            .Include(u => u.UserBalance)
+            .SingleOrDefaultAsync(u => u.Email == email);
         // Check if user exists and verify password
         if (user == null || !BCryptHelper.VerifyPassword(password, user.PasswordHash))
             return null;
         return user;
     }
-    
+
+    public async Task<IReadOnlyList<User>> GetAllAsync()
+    {
+        return await _context.Users
+            .Include(u=>u.AccountProfile)
+            .Include(u=>u.UserBalance)
+            .Include(u=>u.GroupMembers)
+            .Include(u => u.UserRoles) // Load danh sách UserRoles của từng User
+            .ThenInclude(ur => ur.Role) // Load thêm thông tin Role của từng UserRole
+            .ToListAsync();
+    }
 }

@@ -15,7 +15,10 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
     public DbSet<UserBalance> UserBalances { get; set; }
     public DbSet<Transaction> Transactions { get; set; }
     public DbSet<Role> Roles { get; set; }
+    public DbSet<UserRole> UserRoles { get; set; }
+    public DbSet<Permission> Permissions { get; set; }
     public DbSet<GroupTransaction> GroupTransactions { get; set; }
+    public DbSet<GroupBalance> GroupBalances { get; set; }
     public DbSet<GroupMember> GroupMembers { get; set; }
     public DbSet<Group> Groups { get; set; }
     public DbSet<Category> Categories { get; set; }

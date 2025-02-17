@@ -1,3 +1,4 @@
+using System.Net;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using MyBudgetManagement.Application.Exceptions;
@@ -27,7 +28,27 @@ public class GetUserByIdQuery : IRequest<ApiResponse<User>>
                 throw new ApiException("User not found.");
             }
                   
+            /*
             return new ApiResponse<User>(result, "Data Fetched successfully");
+            */
+            
+            try
+            {
+                var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
+                
+                if (user == null)
+                {
+                    return new ApiResponse<User>(null, (int)HttpStatusCode.NotFound +"User not found.");
+                }
+
+                return new ApiResponse<User>(user, "Data fetched successfully.");
+            }
+            catch (Exception ex)
+            {
+                // Log exception nếu cần
+                return new ApiResponse<User>(null, (int)HttpStatusCode.InternalServerError + $"An unexpected error occurred: {ex.Message}");
+            }
+            
         }
     }
     

@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\MyBudgetManagement.Application\MyBudgetManagement.Application.csproj" />
+      <ProjectReference Include="..\MyBudgetManagement.Persistance\MyBudgetManagement.Persistance.csproj" />
     </ItemGroup>
 
     <ItemGroup>

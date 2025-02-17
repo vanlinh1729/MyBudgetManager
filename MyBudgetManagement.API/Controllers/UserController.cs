@@ -16,7 +16,7 @@ public class UserController : ControllerBase
     {
         _mediator = mediator;
     }
-    [Authorize(Roles = "User")]
+    [Authorize(Roles = "Admin")]
     [HttpGet]
     public async Task<IActionResult> GetAllUsers()
     {

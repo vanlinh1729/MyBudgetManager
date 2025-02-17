@@ -10,7 +10,12 @@ public interface IApplicationDbContext
     DbSet<UserBalance> UserBalances { get; set; } 
     DbSet<Transaction> Transactions { get; set; } 
     DbSet<Role> Roles { get; set; }
+    DbSet<UserRole> UserRoles { get; set; }
+    
+    public DbSet<Permission> Permissions { get; set; }
+
     DbSet<GroupTransaction> GroupTransactions { get; set; }
+    public DbSet<GroupBalance> GroupBalances { get; set; }
     DbSet<GroupMember> GroupMembers { get; set; }
     DbSet<Group> Groups { get; set; }
     DbSet<Category> Categories { get; set; }
