@@ -19,10 +19,17 @@ public class AccountProfileController : ControllerBase
     }
 
     [Authorize(Roles = "Admin")]
-    [HttpPost("accountprofiles")]
+    [HttpPost()]
     public async Task<IActionResult> CreateAccountProfile(CreateAccountProfileCommand createAccountProfile, CancellationToken cancellationToken)
     {
         var result = await _mediator.Send(createAccountProfile, cancellationToken);
+        return Ok(result);
+    }
+    [Authorize(Roles = "User")]
+    [HttpPut()]
+    public async Task<IActionResult> UpdateAccountProfile(UpdateAccountProfileCommand updateAccountProfile, CancellationToken cancellationToken)
+    {
+        var result = await _mediator.Send(updateAccountProfile, cancellationToken);
         return Ok(result);
     }
 }

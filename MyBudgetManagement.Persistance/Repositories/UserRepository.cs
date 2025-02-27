@@ -34,15 +34,4 @@ public class UserRepository : GenericRepository<User>, IUserRepositoryAsync
             return null;
         return user;
     }
-
-    public async Task<IReadOnlyList<User>> GetAllAsync()
-    {
-        return await _context.Users
-            .Include(u=>u.AccountProfile)
-            .Include(u=>u.UserBalance)
-            .Include(u=>u.GroupMembers)
-            .Include(u => u.UserRoles) // Load danh sách UserRoles của từng User
-            .ThenInclude(ur => ur.Role) // Load thêm thông tin Role của từng UserRole
-            .ToListAsync();
-    }
 }

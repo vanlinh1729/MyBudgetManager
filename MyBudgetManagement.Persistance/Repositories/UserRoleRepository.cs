@@ -1,4 +1,6 @@
+using System.Linq.Dynamic.Core;
 using LinqKit;
+using Microsoft.EntityFrameworkCore;
 using MyBudgetManagement.Application.Interfaces;
 using MyBudgetManagement.Domain.Entities;
 using MyBudgetManagement.Domain.Interfaces;
@@ -12,5 +14,15 @@ public class UserRoleRepository : GenericRepository<UserRole>, IUserRoleReposito
     public UserRoleRepository(ApplicationDbContext dbContext, IApplicationDbContext context) : base(dbContext)
     {
         _context = context;
+    }
+
+    public async Task<List<UserRole>> GetUserRolesByUserIdAsync(Guid userId)
+    {
+        return await _context.UserRoles.Where(x=>x.UserId==userId).ToListAsync();
+    }
+
+    public async Task<List<UserRole>> GetUserRolesByRoleIdAsync(Guid roleId)
+    {
+        return await _context.UserRoles.Where(x=>x.RoleId==roleId).ToListAsync();
     }
 }

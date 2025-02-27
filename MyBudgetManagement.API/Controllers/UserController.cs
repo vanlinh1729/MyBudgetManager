@@ -16,6 +16,7 @@ public class UserController : ControllerBase
     {
         _mediator = mediator;
     }
+    /*
     [Authorize(Roles = "Admin")]
     [HttpGet]
     public async Task<IActionResult> GetAllUsers()
@@ -23,13 +24,28 @@ public class UserController : ControllerBase
         var result = await _mediator.Send(new GetAllUserQuery());
         return Ok(result);
     } 
+    */
     
     [Authorize(Roles = "Admin")]
-    [HttpGet("{id}")]
+    [HttpGet("{id:guid}")]
     public async Task<IActionResult> GetUserById(Guid id)
     {
         var result = await _mediator.Send(new GetUserByIdQuery {Id = id} );
         return Ok(result);
+    }
+    
+    [Authorize(Roles = "Admin")]
+    [HttpGet()]
+    public async Task<IActionResult> GetUsers([FromQuery] string? email)
+    {
+        if (!string.IsNullOrEmpty(email))
+        {
+            var result = await _mediator.Send(new GetUserByEmailQuery { Email = email });
+            return Ok(result);
+        }
+    
+        var resultAll = await _mediator.Send(new GetAllUserQuery());
+        return Ok(resultAll);
     }
     [HttpPost()]
     public async Task<IActionResult> Register(CreateUserCommand command, CancellationToken cancellationToken)
@@ -39,7 +55,7 @@ public class UserController : ControllerBase
     }
     
     [Authorize(Roles = "User")]
-    [HttpPost("change-password")]
+    [HttpPut("change-password")]
     public async Task<IActionResult> ChangePassword(ChangePasswordCommand command, CancellationToken cancellationToken)
     {
         var result = await _mediator.Send(command, cancellationToken);

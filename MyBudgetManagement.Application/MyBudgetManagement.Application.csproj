@@ -19,9 +19,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Features\AccountProfiles\Queries\" />
+      <Folder Include="Features\Categories\" />
       <Folder Include="Features\Roles\Commands\" />
-      <Folder Include="Features\Roles\Queries\" />
+      <Folder Include="Features\Transactions\" />
     </ItemGroup>
 
 </Project>

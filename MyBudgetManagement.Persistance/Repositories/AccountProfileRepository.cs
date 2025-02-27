@@ -1,3 +1,4 @@
+using System.Data.Entity;
 using MyBudgetManagement.Application.Interfaces;
 using MyBudgetManagement.Domain.Entities;
 using MyBudgetManagement.Domain.Interfaces;
@@ -14,5 +15,10 @@ public class AccountProfileRepository : GenericRepository<AccountProfile> , IAcc
     {
         _context = context;
         _dbcontext = dbcontext;
+    }
+
+    public async Task<AccountProfile?> GetAccountProfileByUserIdAsync(Guid userId)
+    {
+        return await _dbcontext.AccountProfiles.FirstOrDefaultAsync(x=>x.UserId == userId);
     }
 }             

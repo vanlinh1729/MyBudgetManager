@@ -12,6 +12,6 @@ public class UserDto
     public DateTime Created { get; set; }
     
     public AccountProfileDto AccountProfile { get; set; }
-    public UserBalance UserBalance { get; set; }
+    public UserBalanceDto UserBalance { get; set; }
     public List<UserRoleDto> UserRoles { get; set; }
 }
