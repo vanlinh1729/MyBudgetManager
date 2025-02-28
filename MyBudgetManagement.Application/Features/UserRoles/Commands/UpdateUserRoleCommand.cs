@@ -4,21 +4,23 @@ using MyBudgetManagement.Domain.Interfaces;
 
 namespace MyBudgetManagement.Application.Features.UserRoles.Commands;
 
-public class UpdateUserRoleCommand : IRequest<ApiResponse<string>>
+public class UpdateUserRoleCommand : IRequest<ApiResponse<bool>>
 {
+    public Guid UserId { get; set; }
     public Guid RoleId { get; set; }
 
-    internal class UpdateUserCommandHandler : IRequestHandler<UpdateUserRoleCommand, ApiResponse<string>>
+    internal class UpdateUserCommandHandler : IRequestHandler<UpdateUserRoleCommand, ApiResponse<bool>>
     {
-        public IUserRepositoryAsync _userRoleRepository { get; set; }
+        public IUserRoleRepositoryAsync _userRoleRepository { get; set; }
 
-        public UpdateUserCommandHandler(IUserRepositoryAsync userRoleRepository)
+        public UpdateUserCommandHandler(IUserRoleRepositoryAsync userRoleRepository)
         {
             _userRoleRepository = userRoleRepository;
         }
-        public async Task<ApiResponse<string>> Handle(UpdateUserRoleCommand request, CancellationToken cancellationToken)
+        public async Task<ApiResponse<bool>> Handle(UpdateUserRoleCommand request, CancellationToken cancellationToken)
         {
-           // await _userRoleRepository.UpdateAsync()
+            var updatedCheck = await _userRoleRepository.UpdateUserRoleAsync(request.UserId, request.RoleId);
+            return new ApiResponse<bool>(updatedCheck);
         }
     }
     

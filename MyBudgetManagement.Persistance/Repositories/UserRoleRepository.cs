@@ -35,4 +35,19 @@ public class UserRoleRepository : GenericRepository<UserRole>, IUserRoleReposito
             await _context.SaveChangesAsync();
         }
     }
+
+    public async Task<bool> UpdateUserRoleAsync(Guid userId, Guid roleId)
+    {
+        var userRole = await _context.UserRoles
+            .FirstOrDefaultAsync(ur => ur.UserId == userId);
+
+        if (userRole == null)
+        {
+            return false;
+        }
+
+        userRole.RoleId = roleId;
+        _context.UserRoles.Update(userRole);
+        return await _context.SaveChangesAsync() > 0;
+    }
 }
