@@ -25,4 +25,14 @@ public class UserRoleRepository : GenericRepository<UserRole>, IUserRoleReposito
     {
         return await _context.UserRoles.Where(x=>x.RoleId==roleId).ToListAsync();
     }
+
+    public async Task DeleteUserRoleAsync(Guid userId, Guid roleId)
+    {
+        var userRole = await _context.UserRoles.Where(x=>x.UserId == userId && x.UserId == roleId).FirstOrDefaultAsync();
+        if (userRole != null)
+        {
+            _context.UserRoles.Remove(userRole);
+            await _context.SaveChangesAsync();
+        }
+    }
 }

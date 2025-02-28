@@ -14,43 +14,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e70224e3-2a35-4c9d-a03f-d50d21743ac5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/DTOs/CreateUserDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/DTOs/LoginDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/DTOs/UserBalanceDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/AccountProfiles/Commands/UpdateAccountProfileCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/AccountProfiles/Queries/GetAccountProfileByIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/AccountProfiles/Queries/GetAllAccountProfileQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Roles/Queries/GetAllRoleQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Roles/Queries/GetRoleByIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserRoles/Commands/CreateUserRoleCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserRoles/Commands/DeleteUserRoleCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserRoles/Commands/UpdateUserRoleCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserRoles/Queries/GetAllUserRoleQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserRoles/Queries/GetUserRoleByRoleIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserRoles/Queries/GetUserRoleByUserIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Queries/GetUserByEmailQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Interfaces/IUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Services/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/dataSources/935fb7c4-1b55-4d7f-9fc2-4a747534f116.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/AccountProfileController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/AccountProfileController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/UserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Logs/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Logs/logs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/DTOs/UserDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/DTOs/UserDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/DTOs/UserRoleDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/DTOs/UserRoleDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/AccountProfiles/Commands/CreateAccountProfileCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/AccountProfiles/Commands/CreateAccountProfileCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Commands/CreateUserCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Commands/CreateUserCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Queries/GetUserByIdQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Queries/GetUserByIdQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Mappings/MappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Mappings/MappingProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/MyBudgetManagement.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/MyBudgetManagement.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/ServiceExtentions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/ServiceExtentions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/LendingContact.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Loans.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IAccountProfileRepositoryAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IAccountProfileRepositoryAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserRoles/Commands/DeleteUserRoleCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserRoles/Commands/DeleteUserRoleCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserRoles/Commands/UpdateUserRoleCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserRoles/Commands/UpdateUserRoleCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IUserRoleRepositoryAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IUserRoleRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/AccountProfileRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/AccountProfileRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/UserRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/UserRoleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/UserRoleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,23 +78,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.MyBudgetManagement.API: http.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Launch Settings Profile.MyBudgetManagement.WebAPI: http.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.79136693&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.MyBudgetManagement.API: http.executor": "Debug",
+    ".NET Launch Settings Profile.MyBudgetManagement.WebAPI: http.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "XThreadsFramesViewSplitterKey": "0.7247191",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/linhnguyen/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
+      "/Users/linhnguyen/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache",
+      "/Users/linhnguyen/Library/Application Support/Symbols/src"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.MyBudgetManagement.API: http">
     <configuration name="MyBudgetManagement.API: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/MyBudgetManagement.API/MyBudgetManagement.API.csproj" />
@@ -263,6 +243,7 @@
       <workItem from="1739481647768" duration="37975000" />
       <workItem from="1739762025198" duration="33507000" />
       <workItem from="1740531483209" duration="9183000" />
+      <workItem from="1740715697965" duration="1961000" />
     </task>
     <servers />
   </component>
