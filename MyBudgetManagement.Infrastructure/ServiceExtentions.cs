@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using MyBudgetManagement.Application.Interfaces;
 using MyBudgetManagement.Domain.Interfaces;
 using MyBudgetManagement.Infrastructure.Authentication;
 
@@ -15,6 +16,8 @@ public static class ServiceExtentions
         //add services
         services.AddScoped<IJwtProvider, JwtProvider>();  
         services.AddScoped<IDataSeeder, DataSeeder>();
+        services.AddScoped<IEmailService, EmailService.EmailService>();
+
 
         services.AddAuthentication(options =>
             {

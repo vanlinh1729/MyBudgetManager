@@ -1,16 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using MyBudgetManagement.Application.Helpers;
+using MyBudgetManagement.Application.Interfaces;
 using MyBudgetManagement.Domain.Entities;
 using MyBudgetManagement.Domain.Enums;
-using MyBudgetManagement.Persistance.Context;
 
 namespace MyBudgetManagement.Infrastructure;
 
 public class DataSeeder : IDataSeeder
 {
-    private readonly ApplicationDbContext _dbContext;
+    private readonly IApplicationDbContext _dbContext;
 
-    public DataSeeder(ApplicationDbContext dbContext)
+    public DataSeeder(IApplicationDbContext dbContext)
     {
         _dbContext = dbContext;
     }

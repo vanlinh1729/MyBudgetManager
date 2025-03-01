@@ -9,6 +9,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\MyBudgetManagement.Application\MyBudgetManagement.Application.csproj" />
+      <ProjectReference Include="..\MyBudgetManagement.Domain\MyBudgetManagement.Domain.csproj" />
     </ItemGroup>
 
     <ItemGroup>

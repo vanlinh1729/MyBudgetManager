@@ -1,5 +1,6 @@
 
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using MyBudgetManagement.Domain.Entities;
 
 namespace MyBudgetManagement.Application.Interfaces;
@@ -22,4 +23,5 @@ public interface IApplicationDbContext
     DbSet<AccountProfile> AccountProfiles { get; set; }
     DbSet<RefreshToken> RefreshTokens { get; set; }
     Task<int> SaveChangesAsync();
+    DatabaseFacade Database { get;}
 }

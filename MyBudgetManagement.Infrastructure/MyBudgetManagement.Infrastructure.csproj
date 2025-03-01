@@ -8,16 +8,13 @@
 
     <ItemGroup>
       <ProjectReference Include="..\MyBudgetManagement.Application\MyBudgetManagement.Application.csproj" />
-      <ProjectReference Include="..\MyBudgetManagement.Persistance\MyBudgetManagement.Persistance.csproj" />
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="MailKit" Version="4.10.0" />
       <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0-rc.2.24473.5" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="EmailService\" />
+      <PackageReference Include="MimeKit" Version="4.10.0" />
     </ItemGroup>
 
 </Project>

@@ -19,9 +19,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Features\Categories\" />
+      <Folder Include="Features\Categories\Queries\" />
+      <Folder Include="Features\GroupBalances\" />
+      <Folder Include="Features\GroupMembers\" />
+      <Folder Include="Features\Groups\" />
+      <Folder Include="Features\GroupTransactions\" />
       <Folder Include="Features\Roles\Commands\" />
       <Folder Include="Features\Transactions\" />
+      <Folder Include="Features\UserBalances\" />
     </ItemGroup>
 
 </Project>
