@@ -196,231 +196,137 @@ public class UserService : IUserService
         </body>
         </html>";
 var emailBody = $$"""
-<!DOCTYPE html>
-<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
-
-<head>
-	<title></title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]--><!--[if !mso]><!-->
-	<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css"><!--<![endif]-->
-	<style>
-		* {
-			box-sizing: border-box;
-		}
-
-		body {
-			margin: 0;
-			padding: 0;
-		}
-
-		a[x-apple-data-detectors] {
-			color: inherit !important;
-			text-decoration: inherit !important;
-		}
-
-		#MessageViewBody a {
-			color: inherit;
-			text-decoration: none;
-		}
-
-		p {
-			line-height: inherit
-		}
-
-		.desktop_hide,
-		.desktop_hide table {
-			mso-hide: all;
-			display: none;
-			max-height: 0px;
-			overflow: hidden;
-		}
-
-		.image_block img+div {
-			display: none;
-		}
-
-		sup,
-		sub {
-			font-size: 75%;
-			line-height: 0;
-		}
-
-		@media (max-width:545px) {
-			.social_block.desktop_hide .social-table {
-				display: inline-block !important;
-			}
-
-			.image_block div.fullWidth {
-				max-width: 100% !important;
-			}
-
-			.mobile_hide {
-				display: none;
-			}
-
-			.row-content {
-				width: 100% !important;
-			}
-
-			.stack .column {
-				width: 100%;
-				display: block;
-			}
-
-			.mobile_hide {
-				min-height: 0;
-				max-height: 0;
-				max-width: 0;
-				overflow: hidden;
-				font-size: 0px;
-			}
-
-			.desktop_hide,
-			.desktop_hide table {
-				display: table !important;
-				max-height: none !important;
-			}
-		}
-	</style><!--[if mso ]><style>sup, sub { font-size: 100% !important; } sup { mso-text-raise:10% } sub { mso-text-raise:-10% }</style> <![endif]-->
-</head>
-
-<body class="body" style="background-color: #FFFFFF; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
-	<table class="nl-container" width="100%" border="0.5" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #FFFFFF;">
-		<tbody>
-			<tr>
-				<td>
-					<table class="row row-1" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff;">
-						<tbody>
-							<tr>
-								<td>
-									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 525px; margin: 0 auto;" width="525">
-										<tbody>
-											<tr>
-												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top;">
-													<table class="heading_block block-1" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-														<tr>
-															<td class="pad">
-																<h1 style="margin: 0; color: #7747FF; direction: ltr; font-family: 'Abril Fatface', 'Times New Roman', serif; font-size: 43px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 51.6px;"><span class="tinyMce-placeholder" style="word-break: break-word;">Welcome to MyBudgetManagement</span></h1>
-															</td>
-														</tr>
-													</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<table class="row row-2" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff;">
-						<tbody>
-							<tr>
-								<td>
-									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-radius: 0; border-right: 1px solid #000000; border-top: 1px solid #000000; color: #000000; width: 525px; margin: 0 auto;" width="525">
-										<tbody>
-											<tr>
-												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; background-color: #ffffff; padding-bottom: 5px; padding-top: 5px; vertical-align: top;">
-													<table class="image_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-														<tr>
-															<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
-																<div class="alignment" align="center" style="line-height:10px">
-																	<div class="fullWidth" style="max-width: 523px;"><img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/4qcmm84c/jvb/idn/5jx/1.png" style="display: block; height: auto; border: 0; width: 100%;" width="523" alt title height="auto"></div>
-																</div>
-															</td>
-														</tr>
-													</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<table class="row row-3" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-						<tbody>
-							<tr>
-								<td>
-									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 525px; margin: 0 auto;" width="525">
-										<tbody>
-											<tr>
-												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top;">
-													<div class="spacer_block block-1" style="height:20px;line-height:20px;font-size:1px;">&#8202;</div>
-													<table class="paragraph_block block-2" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
-														<tr>
-															<td class="pad">
-																<div style="color:#101112;direction:ltr;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:19.2px;">
-																	<p style="margin: 0;"><strong>Hi User,</strong></p>
-																</div>
-															</td>
-														</tr>
-													</table>
-													<table class="paragraph_block block-3" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
-														<tr>
-															<td class="pad">
-																<div style="color:#101112;direction:ltr;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:19.2px;">
-																	<p style="margin: 0; margin-bottom: 16px;"><strong>Congratulations on starting your journey with MyBudgetManagement.</strong></p>
-																	<p style="margin: 0; margin-bottom: 16px;">We are excited to have you on board. Your account has been successfully created. You can now start using our service to enjoy the features and benefits we offer.</p>
-																	<p style="margin: 0;">If you have any questions, feel free to contact our support team.</p>
-																</div>
-															</td>
-														</tr>
-													</table>
-													<div class="spacer_block block-4" style="height:20px;line-height:20px;font-size:1px;">&#8202;</div>
-													<table class="button_block block-5" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-														<tr>
-															<td class="pad">
-																<div class="alignment" align="center"><a href="https://mybudgetmanagement.nguyenvanlinh.io.vn/login" target="_blank" style="color:#ffffff;text-decoration:none;"><!--[if mso]>
-<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"  href="https://mybudgetmanagement.nguyenvanlinh.io.vn/login"  style="height:54px;width:164px;v-text-anchor:middle;" arcsize="8%" fillcolor="#7747FF">
-<v:stroke dashstyle="Solid" weight="0px" color="#7747FF"/>
-<w:anchorlock/>
-<v:textbox inset="0px,0px,0px,0px">
-<center dir="false" style="color:#ffffff;font-family:sans-serif;font-size:22px">
-<![endif]--><span class="button" style="background-color: #7747FF; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 4px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; display: inline-block; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 22px; font-weight: 400; mso-border-alt: none; padding-bottom: 5px; padding-top: 5px; padding-left: 20px; padding-right: 20px; text-align: center; width: auto; word-break: keep-all; letter-spacing: normal;"><span style="word-break: break-word; line-height: 44px;">Explore Now</span></span><!--[if mso]></center></v:textbox></v:roundrect><![endif]--></a></div>
-															</td>
-														</tr>
-													</table>
-													<table class="social_block block-6" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-														<tr>
-															<td class="pad">
-																<div class="alignment" align="center">
-																	<table class="social-table" width="72px" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block;">
-																		<tr>
-																			<td style="padding:0 2px 0 2px;"><a href="https://www.facebook.com/nvl.1712" target="_blank"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-dark-gray/facebook@2x.png" width="32" height="auto" alt="Facebook" title="facebook" style="display: block; height: auto; border: 0;"></a></td>
-																			<td style="padding:0 2px 0 2px;"><a href="mailto:mailto:vanlinhnguyen1729@gmail.com?subject=Hi, I need your support!" target="_blank"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-dark-gray/mail@2x.png" width="32" height="auto" alt="E-Mail" title="E-Mail" style="display: block; height: auto; border: 0;"></a></td>
-																		</tr>
-																	</table>
-																</div>
-															</td>
-														</tr>
-													</table>
-													<table class="paragraph_block block-7" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
-														<tr>
-															<td class="pad">
-																<div style="color:#101112;direction:ltr;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:center;mso-line-height-alt:19.2px;">
-																	<p style="margin: 0; margin-bottom: 16px;">© 2025 MyBudgetManagement. All rights reserved.</p>
-																	<p style="margin: 0;">Hanoi, Vietnam</p>
-																</div>
-															</td>
-														</tr>
-													</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</td>
-			</tr>
-		</tbody>
-	</table><!-- End -->
-</body>
-
-</html>
-""";
+                  <!DOCTYPE html>
+                  <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+                  
+                  <head>
+                      <title>Registration Success</title>
+                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                      <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface:wght@100;400;700" rel="stylesheet" type="text/css">
+                      <style>
+                          * {
+                              box-sizing: border-box;
+                          }
+                  
+                          body {
+                              margin: 0;
+                              padding: 0;
+                              background-color: #f8f9fa; /* Màu nền tổng thể */
+                              font-family: Arial, sans-serif;
+                          }
+                  
+                          .container {
+                              width: 100%;
+                              max-width: 600px;
+                              margin: 20px auto;
+                              background-color: #ffffff; /* Màu nền thẻ */
+                              border-radius: 8px;
+                              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                          }
+                  
+                          .header {
+                              background-color: #7747FF; /* Màu nền đầu thẻ */
+                              color: #ffffff;
+                              text-align: center;
+                              padding: 20px;
+                          }
+                  
+                          .header h1 {
+                              margin: 0;
+                              font-family: 'Abril Fatface', serif;
+                              font-size: 36px;
+                          }
+                  
+                          .image-block {
+                              text-align: center;
+                              padding: 20px;
+                          }
+                  
+                          .image-block img {
+                              width: 100%;
+                              height: auto;
+                              border-radius: 8px;
+                          }
+                  
+                          .content {
+                              padding: 20px;
+                              color: #101112;
+                          }
+                  
+                          .content p {
+                              margin: 0 0 16px;
+                              line-height: 1.5;
+                          }
+                  
+                          .button {
+                              display: inline-block;
+                              background-color: #7747FF;
+                              color: #ffffff;
+                              padding: 10px 20px;
+                              border-radius: 4px;
+                              text-decoration: none;
+                              font-weight: bold;
+                              text-align: center;
+                              margin: 20px auto; /* Căn giữa */
+                          }
+                  
+                          .social-links {
+                              text-align: center;
+                              margin-top: 20px;
+                          }
+                  
+                          .social-links img {
+                              width: 32px;
+                              height: auto;
+                              margin: 0 5px;
+                          }
+                  
+                          .footer {
+                              text-align: center;
+                              padding: 10px;
+                              background-color: #f1f1f1;
+                              font-size: 14px;
+                              color: #101112;
+                          }
+                      </style>
+                  </head>
+                  
+                  <body>
+                      <div class="container">
+                          <div class="header">
+                              <h1>Welcome to MyBudgetManagement</h1>
+                          </div>
+                          <div class="image-block">
+                              <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/4qcmm84c/jvb/idn/5jx/1.png" alt="Budget Management">
+                          </div>
+                          <div class="content">
+                              <p><strong>Hi User,</strong></p>
+                              <p>Congratulations on starting your journey with MyBudgetManagement.</p>
+                              <p>We are excited to have you on board. Your account has been successfully created. You can now start using our service to enjoy the features and benefits we offer.</p>
+                              <p>If you have any questions, feel free to contact our support team.</p>
+                              <div style="text-align: center;"> <!-- Thêm div này để căn giữa nút -->
+                                  <a href="https://mybudgetmanagement.nguyenvanlinh.io.vn/login" class="button">Explore Now</a>
+                              </div>
+                          </div>
+                          <div class="social-links">
+                              <a href="https://www.facebook.com/nvl.1712" target="_blank">
+                                  <img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-dark-gray/facebook@2x.png" alt="Facebook">
+                              </a>
+                              <a href="mailto:vanlinhnguyen1729@gmail.com?subject=Hi, I need your support!" target="_blank">
+                                  <img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-dark-gray/mail@2x.png" alt="E-Mail">
+                              </a>
+                          </div>
+                          <div class="footer">
+                              <p>© 2025 MyBudgetManagement. All rights reserved.</p>
+                              <p>Hanoi, Vietnam</p>
+                          </div>
+                      </div>
+                  </body>
+                  
+                  </html>
+                  
+                  """;
 
 
             await _emailService.SendEmailAsync(user.Email, subject, emailBody);

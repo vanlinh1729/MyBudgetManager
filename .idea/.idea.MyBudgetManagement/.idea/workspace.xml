@@ -14,23 +14,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e70224e3-2a35-4c9d-a03f-d50d21743ac5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Commands/CreateCategoryCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Commands/DeleteCategoryCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Commands/UpdateCategoryCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Interfaces/IEmailService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/ChatMessage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/Mailing/EmailService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Logs/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Logs/logs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Interfaces/IApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Interfaces/IApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/MyBudgetManagement.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/MyBudgetManagement.Application.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Services/UserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/DataSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/DataSeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/MyBudgetManagement.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/MyBudgetManagement.Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/ServiceExtentions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/ServiceExtentions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Context/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Context/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/MyBudgetManagement.Persistance.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/MyBudgetManagement.Persistance.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +73,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.MyBudgetManagement.API: http.executor": "Run",
+    ".NET Launch Settings Profile.MyBudgetManagement.API: http.executor": "Debug",
     ".NET Launch Settings Profile.MyBudgetManagement.WebAPI: http.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -251,7 +237,7 @@
       <workItem from="1739762025198" duration="33507000" />
       <workItem from="1740531483209" duration="9183000" />
       <workItem from="1740715697965" duration="1961000" />
-      <workItem from="1740851912781" duration="7699000" />
+      <workItem from="1740851912781" duration="10048000" />
     </task>
     <servers />
   </component>
