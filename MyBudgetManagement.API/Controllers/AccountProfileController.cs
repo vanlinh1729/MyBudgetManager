@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using MyBudgetManagement.Application.Features.AccountProfiles.Commands;
+using MyBudgetManagement.Application.Features.AccountProfiles.Queries;
 
 namespace MyBudgetManagement.API.Controllers;
 
@@ -18,6 +19,21 @@ public class AccountProfileController : ControllerBase
         _mediator = mediator;
     }
 
+    [Authorize(Roles = "Admin")]
+    [HttpGet()]
+    public async Task<IActionResult> GetAllAccountProfiles(GetAllAccountProfileQuery getAllAccountProfileQuery, CancellationToken cancellationToken)
+    {
+        var result = await _mediator.Send(getAllAccountProfileQuery, cancellationToken);
+        return Ok(result);
+    }
+    [Authorize(Roles = "Admin")]
+    [HttpGet("{id:guid}")]
+    public async Task<IActionResult> GetAccountProfileById(Guid id)
+    {
+        var result = await _mediator.Send(new GetAccountProfileByIdQuery() {Id = id} );
+        return Ok(result);
+    }
+    
     [Authorize(Roles = "Admin")]
     [HttpPost()]
     public async Task<IActionResult> CreateAccountProfile(CreateAccountProfileCommand createAccountProfile, CancellationToken cancellationToken)

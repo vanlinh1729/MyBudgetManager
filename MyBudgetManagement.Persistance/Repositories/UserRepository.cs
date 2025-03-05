@@ -22,6 +22,11 @@ public class UserRepository : GenericRepository<User>, IUserRepositoryAsync
         return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
     }
 
+    public async Task<User?> GetUserByUserBalanceAsync(Guid userBalanceId)
+    {
+        return await _context.Users.FirstOrDefaultAsync(u => u.UserBalance.Id == userBalanceId);
+    }
+
     public async Task<User?> UserLogin(string email, string password)
     {
         var user = await _context.Users

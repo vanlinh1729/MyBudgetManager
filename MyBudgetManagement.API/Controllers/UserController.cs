@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -6,7 +7,7 @@ using MyBudgetManagement.Application.Features.Users.Queries;
 
 namespace MyBudgetManagement.API.Controllers;
 
-[Route("/api/users")]
+[Route("api/users")]
 [ApiController]
 public class UserController : ControllerBase
 {
@@ -58,6 +59,8 @@ public class UserController : ControllerBase
     [HttpPut("change-password")]
     public async Task<IActionResult> ChangePassword(ChangePasswordCommand command, CancellationToken cancellationToken)
     {
+        var userId = User.FindFirstValue("UserId");
+        command.UserId = Guid.Parse(userId);// Lấy UserId (sub claim)
         var result = await _mediator.Send(command, cancellationToken);
         return Ok(result);
     }

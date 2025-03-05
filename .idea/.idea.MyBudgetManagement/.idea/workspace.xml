@@ -14,9 +14,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e70224e3-2a35-4c9d-a03f-d50d21743ac5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Queries/GetAllCategoryByUserIdQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Queries/GetAllCategoryQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Queries/GetCategoryByIdQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Transactions/Commands/CreateTransactionCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Transactions/Commands/DeleteTransactionCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Transactions/Commands/UpdateTransactionCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserBalances/Commands/CreateUserBalanceCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/CategoryRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/TransactionRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/AccountProfileController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/AccountProfileController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/UserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Logs/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Logs/logs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Commands/CreateCategoryCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Commands/CreateCategoryCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Commands/DeleteCategoryCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Commands/DeleteCategoryCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Commands/UpdateCategoryCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Commands/UpdateCategoryCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/MyBudgetManagement.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/MyBudgetManagement.Application.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Services/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/ITransactionRepositoryAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/ITransactionRepositoryAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IUserRepositoryAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IUserRepositoryAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/Authentication/JwtProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/Authentication/JwtProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/ServiceExtentions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/ServiceExtentions.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +45,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DpaMonitoringSettings">
-    <option name="firstShow" value="false" />
+    <option name="autoShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,6 +63,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c928298cef574a599cce9fb782a44de946000/c5/ab29020c/HttpServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/linhnguyen/MyBudgetManager/MyBudgetManagement.API/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/linhnguyen/MyBudgetManager/MyBudgetManagement.API/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Domain/Enums/Currencies.cs" root0="FORCE_HIGHLIGHTING" />
@@ -57,7 +80,7 @@
 }</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -84,7 +107,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -237,7 +260,7 @@
       <workItem from="1739762025198" duration="33507000" />
       <workItem from="1740531483209" duration="9183000" />
       <workItem from="1740715697965" duration="1961000" />
-      <workItem from="1740851912781" duration="10048000" />
+      <workItem from="1740851912781" duration="32635000" />
     </task>
     <servers />
   </component>

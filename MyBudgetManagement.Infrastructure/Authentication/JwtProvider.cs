@@ -23,7 +23,7 @@ public class JwtProvider : IJwtProvider
         var claims =  new List<Claim>
         {
             new Claim(JwtRegisteredClaimNames.Email, user.Email),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            new Claim("UserId", user.Id.ToString())
 
         };
         claims.AddRange(user.UserRoles.Select(ur => new Claim(ClaimTypes.Role, ur.Role.Name)));

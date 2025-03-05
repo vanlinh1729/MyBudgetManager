@@ -64,6 +64,7 @@ try
     builder.Services.AddApplication();
     builder.Services.AddInfrastructure(builder.Configuration);
     builder.Services.AddPersistance(builder.Configuration);
+    builder.Services.AddHttpContextAccessor();
 
     builder.Host.UseSerilog();
 
