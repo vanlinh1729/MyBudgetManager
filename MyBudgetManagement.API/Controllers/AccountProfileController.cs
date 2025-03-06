@@ -42,9 +42,10 @@ public class AccountProfileController : ControllerBase
         return Ok(result);
     }
     [Authorize(Roles = "User")]
-    [HttpPut()]
-    public async Task<IActionResult> UpdateAccountProfile(UpdateAccountProfileCommand updateAccountProfile, CancellationToken cancellationToken)
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateAccountProfile(Guid id, UpdateAccountProfileCommand updateAccountProfile, CancellationToken cancellationToken)
     {
+        updateAccountProfile.UserId = id;
         var result = await _mediator.Send(updateAccountProfile, cancellationToken);
         return Ok(result);
     }

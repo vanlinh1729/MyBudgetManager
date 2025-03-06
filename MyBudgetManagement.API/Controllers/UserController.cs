@@ -17,17 +17,8 @@ public class UserController : ControllerBase
     {
         _mediator = mediator;
     }
-    /*
-    [Authorize(Roles = "Admin")]
-    [HttpGet]
-    public async Task<IActionResult> GetAllUsers()
-    {
-        var result = await _mediator.Send(new GetAllUserQuery());
-        return Ok(result);
-    } 
-    */
     
-    [Authorize(Roles = "Admin")]
+    [Authorize()]
     [HttpGet("{id:guid}")]
     public async Task<IActionResult> GetUserById(Guid id)
     {
@@ -48,49 +39,13 @@ public class UserController : ControllerBase
         var resultAll = await _mediator.Send(new GetAllUserQuery());
         return Ok(resultAll);
     }
-    [HttpPost()]
-    public async Task<IActionResult> Register(CreateUserCommand command, CancellationToken cancellationToken)
+    
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateUser(Guid id, [FromBody] UpdateUserCommand command)
     {
-        var result = await _mediator.Send(command, cancellationToken);
+        command.UserId = id; 
+        var result = await _mediator.Send(command);
         return Ok(result);
     }
     
-    [Authorize(Roles = "User")]
-    [HttpPut("change-password")]
-    public async Task<IActionResult> ChangePassword(ChangePasswordCommand command, CancellationToken cancellationToken)
-    {
-        var userId = User.FindFirstValue("UserId");
-        command.UserId = Guid.Parse(userId);// Lấy UserId (sub claim)
-        var result = await _mediator.Send(command, cancellationToken);
-        return Ok(result);
-    }
-    
-    [HttpPost("login")]
-    public async Task<IActionResult> Login (LoginCommand command, CancellationToken cancellationToken)
-    {
-        var result = await _mediator.Send(command, cancellationToken);
-        return Ok(result);
-    }
-    [HttpPost("logout")]
-    public async Task<IActionResult> Logout (LogoutCommand command, CancellationToken cancellationToken)
-    {
-        var result = await _mediator.Send(command, cancellationToken);
-        return Ok(result);
-    }
-    
-    [Authorize]
-    [HttpPost("refresh-token")]
-    public async Task<IActionResult> RefreshToken (RefreshTokenCommand command, CancellationToken cancellationToken)
-    {
-        var result = await _mediator.Send(command, cancellationToken);
-        return Ok(result);
-    }
-    
-    [Authorize]
-    [HttpPost("revoke-token")]
-    public async Task<IActionResult> RevokeToken (RevokeTokenCommand command, CancellationToken cancellationToken)
-    {
-        var result = await _mediator.Send(command, cancellationToken);
-        return Ok(result);
-    }
 }
