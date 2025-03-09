@@ -6,7 +6,7 @@ using MyBudgetManagement.Application.Wrappers;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MyBudgetManagement.Application.Features.Users.Commands;
+namespace MyBudgetManagement.Application.Features.Auths.Commands;
 
 public class CreateUserCommand : IRequest<ApiResponse<UserDto>>
 {

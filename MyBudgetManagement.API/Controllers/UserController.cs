@@ -30,14 +30,24 @@ public class UserController : ControllerBase
     [HttpGet()]
     public async Task<IActionResult> GetUsers([FromQuery] string? email)
     {
-        if (!string.IsNullOrEmpty(email))
+        try
         {
-            var result = await _mediator.Send(new GetUserByEmailQuery { Email = email });
-            return Ok(result);
-        }
+
+            if (!string.IsNullOrEmpty(email))
+            {
+                var result = await _mediator.Send(new GetUserByEmailQuery { Email = email });
+                return Ok(result);
+            }
     
-        var resultAll = await _mediator.Send(new GetAllUserQuery());
-        return Ok(resultAll);
+            var resultAll = await _mediator.Send(new GetAllUserQuery());
+            return Ok(resultAll);
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, "Err: "+ e.Message);
+
+        }
+        
     }
     
     [HttpPut("{id}")]

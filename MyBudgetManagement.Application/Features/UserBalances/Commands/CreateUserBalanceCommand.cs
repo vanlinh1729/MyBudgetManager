@@ -1,5 +1,6 @@
 using MediatR;
 using MyBudgetManagement.Application.Wrappers;
+using MyBudgetManagement.Domain.Entities;
 using MyBudgetManagement.Domain.Interfaces;
 
 namespace MyBudgetManagement.Application.Features.UserBalances.Commands;
@@ -20,6 +21,16 @@ internal class CreateUserBalanceCommandHandler : IRequestHandler<CreateUserBalan
     }
     public async Task<ApiResponse<string>> Handle(CreateUserBalanceCommand request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var userBalance = new UserBalance
+        {
+            UserId = request.UserId,
+            Balance = request.Balance,
+            Created = DateTime.UtcNow,
+            CreatedBy = request.UserId.ToString(),
+            LastModifiedBy = request.UserId.ToString()
+        };
+        await _userBalanceRepository.AddAsync(userBalance);
+        return new ApiResponse<string>("UserBalance created successfully.");
+
     }
 }

@@ -6,6 +6,7 @@ using MyBudgetManagement.Domain.Interfaces;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using MyBudgetManagement.Application.Exceptions;
 
 namespace MyBudgetManagement.Application.Features.Transactions.Commands
 {
@@ -41,7 +42,7 @@ namespace MyBudgetManagement.Application.Features.Transactions.Commands
             var userBalance = await _userBalanceRepository.GetByIdAsync(request.UserBalanceId);
             if (userBalance == null)
             {
-                return new ApiResponse<string>("UserBalance not found.");
+                throw new ApiException("UserBalance not found.");
             }
 
             if (request.CategoryId.HasValue)
@@ -49,7 +50,7 @@ namespace MyBudgetManagement.Application.Features.Transactions.Commands
                 var category = await _categoryRepository.GetByIdAsync(request.CategoryId.Value);
                 if (category == null)
                 {
-                    return new ApiResponse<string>("Category not found.");
+                    throw new ApiException("Category not found.");
                 }
             }
 

@@ -1,7 +1,7 @@
 using AutoMapper;
 using MyBudgetManagement.Application.DTOs;
 using MyBudgetManagement.Application.Features.AccountProfiles.Commands;
-using MyBudgetManagement.Application.Features.Users.Commands;
+using MyBudgetManagement.Application.Features.Auths.Commands;
 using MyBudgetManagement.Domain.Entities;
 
 namespace MyBudgetManagement.Application.Mappings;

@@ -6,7 +6,7 @@ using MyBudgetManagement.Application.Interfaces;
 using MyBudgetManagement.Application.Wrappers;
 using MyBudgetManagement.Domain.Interfaces;
 
-namespace MyBudgetManagement.Application.Features.Users.Commands;
+namespace MyBudgetManagement.Application.Features.Auths.Commands;
 
 public class LoginCommand: IRequest<ApiResponse<string>>
 {

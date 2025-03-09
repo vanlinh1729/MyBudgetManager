@@ -27,6 +27,7 @@ public static class ServiceExtentions
         services.AddScoped<ICategoryRepositoryAsync, CategoryRepository>();  
         services.AddScoped<IAccountProfileRepositoryAsync, AccountProfileRepository>();  
         services.AddScoped<IRoleRepositoryAsync, RoleRepository>();  
+        services.AddScoped<IPermissionRepositoryAsync, PermissionRepository>();  
         services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();  
         
     }

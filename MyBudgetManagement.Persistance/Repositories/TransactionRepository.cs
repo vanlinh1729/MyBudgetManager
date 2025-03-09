@@ -31,4 +31,27 @@ public class TransactionRepository : GenericRepository<Transaction>, ITransactio
         await _context.SaveChangesAsync();
         
     }
+
+    public async Task DeleteTransactionAsync(Guid transactionId)
+    {
+        var transactions = await _context.Transactions
+            .Where(t => t.Id == transactionId).FirstAsync();
+        _context.Transactions.Remove(transactions);
+        await _context.SaveChangesAsync();              
+    }
+
+    public async Task<IReadOnlyList<Transaction>> GetTransactionsByCategoryId(Guid catId)
+    {
+        var transactions = await _context.Transactions
+            .Where(t => t.CategoryId == catId)
+            .ToListAsync();
+        return transactions;
+    }
+
+    public async Task<IReadOnlyList<Transaction>> GetTransactionsByUserId(Guid userId)
+    {
+        var transactions = await _context.Transactions
+            .Where(t => t.UserBalance.UserId == userId)
+            .ToListAsync();
+        return transactions;    }
 }

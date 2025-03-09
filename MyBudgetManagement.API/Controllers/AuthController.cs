@@ -2,7 +2,8 @@ using System.Security.Claims;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MyBudgetManagement.Application.Features.Users.Commands;
+using MyBudgetManagement.Application.Features.Auths.Commands;
+using MyBudgetManagement.Application.Features.Permissions.Queries;
 
 namespace MyBudgetManagement.API.Controllers;
 
@@ -16,7 +17,7 @@ public class AuthController : ControllerBase
     {
         _mediator = mediator;
     }
-    [HttpPost("/register")]
+    [HttpPost("register")]
     public async Task<IActionResult> Register(CreateUserCommand command, CancellationToken cancellationToken)
     {
         var result = await _mediator.Send(command, cancellationToken);
@@ -61,4 +62,5 @@ public class AuthController : ControllerBase
         var result = await _mediator.Send(command, cancellationToken);
         return Ok(result);
     }
+    
 }

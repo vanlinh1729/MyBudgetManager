@@ -3,7 +3,7 @@ using MyBudgetManagement.Application.Wrappers;
 using MyBudgetManagement.Domain.Entities;
 using MyBudgetManagement.Domain.Interfaces;
 
-namespace MyBudgetManagement.Application.Features.Users.Commands;
+namespace MyBudgetManagement.Application.Features.Auths.Commands;
 
 public class RevokeTokenCommand : IRequest<ApiResponse<string>>
 {

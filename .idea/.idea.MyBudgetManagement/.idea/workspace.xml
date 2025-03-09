@@ -14,12 +14,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e70224e3-2a35-4c9d-a03f-d50d21743ac5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/AuthController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Commands/UpdateUserCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/PermissionController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/RoleController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/UserRoleController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Permissions/Queries/GetAllPermissionsQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Transactions/Queries/GetAllTransactionByUserId.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Transactions/Queries/GetAllTransactionQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Transactions/Queries/GetAllTransactionsByCategoryIdQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Transactions/Queries/GetTransactionByIdQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserBalances/Queries/GetAllUserBalanceQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserBalances/Queries/GetUserBalanceByIdQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserBalances/Queries/GetUserBalanceByUserIdQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IPermissionRepositoryAsync.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/PermissionRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/AccountProfileController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/AccountProfileController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/AuthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/CategoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/CategoryController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/TransactionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/TransactionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/UserBalanceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/UserBalanceController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/UserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Logs/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Logs/logs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Commands/UpdateCategoryCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Commands/UpdateCategoryCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Queries/GetAllCategoryByUserIdQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Queries/GetAllCategoryByUserIdQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Queries/GetAllCategoryQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Queries/GetAllCategoryQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Queries/GetCategoryByIdQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Queries/GetCategoryByIdQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Transactions/Commands/DeleteTransactionCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Transactions/Commands/DeleteTransactionCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Transactions/Commands/UpdateTransactionCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Transactions/Commands/UpdateTransactionCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserBalances/Commands/CreateUserBalanceCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserBalances/Commands/CreateUserBalanceCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Commands/ChangePasswordCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Auths/Commands/ChangePasswordCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Commands/CreateUserCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Auths/Commands/CreateUserCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Commands/LoginCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Auths/Commands/LoginCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Commands/LogoutCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Auths/Commands/LogoutCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Commands/RefreshTokenCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Auths/Commands/RefreshTokenCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Users/Commands/RevokeTokenCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Auths/Commands/RevokeTokenCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Mappings/MappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Mappings/MappingProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/MyBudgetManagement.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/MyBudgetManagement.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/ICategoryRepositoryAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/ICategoryRepositoryAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/ITransactionRepositoryAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/ITransactionRepositoryAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IUserBalanceRepositoryAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IUserBalanceRepositoryAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/CategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/CategoryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/TransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/TransactionRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/UserBalanceRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/UserBalanceRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/ServiceExtentions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/ServiceExtentions.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +82,12 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/30223890bfb34a74b8aabde5640325091dea00/d0/c560b888/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c928298cef574a599cce9fb782a44de946000/c5/ab29020c/HttpServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/linhnguyen/MyBudgetManager/MyBudgetManagement.API/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/linhnguyen/MyBudgetManager/MyBudgetManagement.API/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserBalances/Queries/GetAllUserBalanceQuery.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserRoles/Queries/GetUserRoleByRoleIdQuery.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Domain/Enums/Currencies.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Domain/Enums/Gender.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GenericRepository.cs" root0="FORCE_HIGHLIGHTING" />
@@ -76,30 +115,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.MyBudgetManagement.API: http.executor": "Debug",
-    ".NET Launch Settings Profile.MyBudgetManagement.WebAPI: http.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "XThreadsFramesViewSplitterKey": "0.65692306",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.tabs",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.MyBudgetManagement.API: http.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.MyBudgetManagement.WebAPI: http.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.65692306&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/linhnguyen/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
-      "/Users/linhnguyen/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache",
-      "/Users/linhnguyen/Library/Application Support/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/linhnguyen/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/linhnguyen/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
+      &quot;/Users/linhnguyen/Library/Application Support/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.MyBudgetManagement.API: http">
     <configuration name="MyBudgetManagement.API: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/MyBudgetManagement.API/MyBudgetManagement.API.csproj" />
@@ -242,7 +281,9 @@
       <workItem from="1739762025198" duration="33507000" />
       <workItem from="1740531483209" duration="9183000" />
       <workItem from="1740715697965" duration="1961000" />
-      <workItem from="1740851912781" duration="35685000" />
+      <workItem from="1740851912781" duration="52984000" />
+      <workItem from="1741346439571" duration="5000" />
+      <workItem from="1741436665565" duration="7083000" />
     </task>
     <servers />
   </component>

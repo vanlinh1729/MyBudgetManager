@@ -2,7 +2,7 @@ using MediatR;
 using MyBudgetManagement.Application.Wrappers;
 using MyBudgetManagement.Domain.Interfaces;
 
-namespace MyBudgetManagement.Application.Features.Users.Commands;
+namespace MyBudgetManagement.Application.Features.Auths.Commands;
 
 public class LogoutCommand : IRequest<ApiResponse<string>>
 {
