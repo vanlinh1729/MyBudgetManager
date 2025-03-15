@@ -9,5 +9,6 @@ public class GroupBalance : AuditableBaseEntity
     
     //nav props
     public virtual Group Group { get; set; }
-    public virtual ICollection<Category> GroupCategories { get; set; } = new List<Category>();
+    public virtual ICollection<GroupCategory> GroupCategories { get; set; } = new List<GroupCategory>();
+    public virtual ICollection<GroupTransaction> GroupTransactions { get; set; } = new List<GroupTransaction>();
 }

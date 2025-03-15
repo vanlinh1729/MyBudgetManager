@@ -29,6 +29,11 @@ public static class ServiceExtentions
         services.AddScoped<IRoleRepositoryAsync, RoleRepository>();  
         services.AddScoped<IPermissionRepositoryAsync, PermissionRepository>();  
         services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();  
+        services.AddScoped<IGroupBalanceRepositoryAsync, GroupBalanceRepository>();  
+        services.AddScoped<IGroupRepositoryAsync, GroupRepository>();  
+        services.AddScoped<IGroupMemberRepositoryAsync, GroupMemberRepository>();  
+        services.AddScoped<IGroupTransactionRepositoryAsync, GroupTransactionRepository>();  
+        services.AddScoped<IGroupCategoryRepositoryAsync, GroupCategoryRepository>();  
         
     }
 }
