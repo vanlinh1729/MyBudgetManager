@@ -14,45 +14,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e70224e3-2a35-4c9d-a03f-d50d21743ac5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/GroupController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupBalances/Commands/CreateGroupBalanceCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupBalances/Queries/GetAllGroupBalanceQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupBalances/Queries/GetGroupBalanceByGroupIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupCategories/Commands/CreateGroupCategoryCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupCategories/Commands/DeleteGroupCategoryCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupCategories/Commands/UpdateGroupCategoryCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupCategories/Queries/GetAllGroupCategoryByGroupIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupCategories/Queries/GetAllGroupCategoryQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupCategories/Queries/GetGroupCategoryByIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupMembers/Commands/CreateGroupMemberCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupMembers/Commands/DeleteGroupMemberCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupMembers/Queries/GetAllMemberOfGroupQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupMembers/Queries/GetGroupMemberByIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupTransactions/Commands/CreateGroupTransactionCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupTransactions/Commands/DeleteGroupTransactionCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupTransactions/Commands/UpdateGroupTransactionCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupTransactions/Queries/GetAllTransactionOfGroupQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/GroupTransactions/Queries/GetGroupTransactionByIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Groups/Commands/CreateGroupCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Groups/Commands/DeleteGroupCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Groups/Commands/UpdateGroupCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Groups/Queries/GetAllGroupByUserIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Groups/Queries/GetAllGroupQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Groups/Queries/GetGroupByIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IGroupBalanceRepositoryAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IGroupCategoryRepositoryAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GroupBalanceRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GroupCategoryRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GroupMemberRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GroupRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GroupTransactionRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Logs/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Logs/logs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/MyBudgetManagement.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/MyBudgetManagement.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Group.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Group.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/GroupBalance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/GroupBalance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/GroupTransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/GroupTransaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/ServiceExtentions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/ServiceExtentions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Groups/Commands/CreateGroupCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Groups/Commands/CreateGroupCommand.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +246,7 @@
       <workItem from="1740851912781" duration="52984000" />
       <workItem from="1741346439571" duration="5000" />
       <workItem from="1741436665565" duration="18800000" />
-      <workItem from="1741942666849" duration="6949000" />
+      <workItem from="1741942666849" duration="12536000" />
     </task>
     <servers />
   </component>

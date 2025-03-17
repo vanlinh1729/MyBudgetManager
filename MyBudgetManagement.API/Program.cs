@@ -65,7 +65,16 @@ try
     builder.Services.AddInfrastructure(builder.Configuration);
     builder.Services.AddPersistance(builder.Configuration);
     builder.Services.AddHttpContextAccessor();
-
+    builder.Services.AddCors(options =>
+    {
+        options.AddPolicy("AllowAllOrigins",
+            builder =>
+            {
+                builder.WithOrigins("http://localhost:4200") // Cho phép origin này
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+            });
+    });
     builder.Host.UseSerilog();
 
     var app = builder.Build();
@@ -79,6 +88,7 @@ try
         app.UseSwaggerUI();
     }
 
+    app.UseCors("AllowAllOrigins"); // Áp dụng CORS policy
     app.UseAuthentication();
     app.UseAuthorization();
     app.UseHttpsRedirection();
