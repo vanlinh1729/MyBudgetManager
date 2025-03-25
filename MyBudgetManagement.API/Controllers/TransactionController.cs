@@ -4,6 +4,10 @@ using System;
 using System.Threading.Tasks;
 using MyBudgetManagement.Application.Features.Transactions.Commands;
 using MyBudgetManagement.Application.Features.Transactions.Queries;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
+using MyBudgetManagement.Application.Exceptions;
+using MyBudgetManagement.Application.Wrappers;
 
 namespace MyBudgetManagement.API.Controllers
 {
@@ -18,11 +22,20 @@ namespace MyBudgetManagement.API.Controllers
             _mediator = mediator;
         }
 
+        [Authorize(Roles = "User")]
         [HttpPost]
         public async Task<IActionResult> CreateTransaction([FromBody] CreateTransactionCommand command)
         {
-            var result = await _mediator.Send(command);
-            return Ok(result);
+            try 
+            {
+                command.UserId = Guid.Parse(User.FindFirstValue("UserId"));
+                var result = await _mediator.Send(command);
+                return Ok(result);
+            }
+            catch (ApiException ex)
+            {
+                return BadRequest(new ApiResponse<string>(null, ex.Message) { Succeeded = false });
+            }
         }
 
         [HttpPut("{id}")]
@@ -65,6 +78,15 @@ namespace MyBudgetManagement.API.Controllers
         public async Task<IActionResult> GetTransactionsByUserId(Guid userId)
         {
             var result = await _mediator.Send(new GetAllTransactionByUserId() { UserId = userId });
+            return Ok(result);
+        }
+
+        [Authorize(Roles = "User")]
+        [HttpGet("current")]
+        public async Task<IActionResult> GetCurrentUserTransactions()
+        {
+            var userId = Guid.Parse(User.FindFirstValue("UserId")); // Lấy UserId từ token
+            var result = await _mediator.Send(new GetAllTransactionByUserId { UserId = userId });
             return Ok(result);
         }
     }

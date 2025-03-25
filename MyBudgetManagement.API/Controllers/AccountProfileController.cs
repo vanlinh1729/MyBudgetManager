@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -45,8 +46,33 @@ public class AccountProfileController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateAccountProfile(Guid id, UpdateAccountProfileCommand updateAccountProfile, CancellationToken cancellationToken)
     {
-        updateAccountProfile.UserId = id;
+        updateAccountProfile.Id = id;
         var result = await _mediator.Send(updateAccountProfile, cancellationToken);
+        return Ok(result);
+    }
+
+    [Authorize(Roles = "User")]
+    [HttpGet("current")]
+    public async Task<IActionResult> GetCurrentUserAccountProfile()
+    {
+        var userId = Guid.Parse(User.FindFirstValue("UserId")); // Lấy UserId từ token
+        var query = new GetAccountProfileOfCurrentUserQuery { UserId = userId };
+        var result = await _mediator.Send(query);
+        return Ok(result);
+    }
+
+    [Authorize(Roles = "User")]
+    [HttpPost("avatar")]
+    public async Task<IActionResult> UploadAvatar(IFormFile file, CancellationToken cancellationToken)
+    {
+        var userId = Guid.Parse(User.FindFirstValue("UserId"));
+        var command = new UploadAvatarCommand
+        {
+            UserId = userId,
+            AvatarFile = file
+        };
+        
+        var result = await _mediator.Send(command, cancellationToken);
         return Ok(result);
     }
 }

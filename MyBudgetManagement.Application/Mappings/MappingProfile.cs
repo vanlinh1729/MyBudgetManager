@@ -14,6 +14,7 @@ public class MappingProfile : Profile
         CreateMap<CreateUserCommand, CreateUserDto>();
         CreateMap<CreateUserDto, User>();
         CreateMap<CreateAccountProfileCommand, AccountProfile>();
+        CreateMap<UpdateAccountProfileCommand, AccountProfile>();
         CreateMap<AccountProfile, AccountProfileDto>();
         CreateMap<User, UserDto>()
             .ForMember(dest => dest.UserRoles, 

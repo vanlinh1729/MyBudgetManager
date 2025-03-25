@@ -1,4 +1,6 @@
+using System.Security.Claims;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MyBudgetManagement.Application.Features.Categories.Commands;
 using MyBudgetManagement.Application.Features.Categories.Queries;
@@ -60,6 +62,13 @@ public class CategoryController : ControllerBase
         var result = await _mediator.Send(command);
         return Ok(result);
     }
-    
-    
+    [Authorize(Roles = "User")]
+    [HttpGet("current")]
+    public async Task<IActionResult> GetCurrentUserCategories()
+    {
+        var userId = Guid.Parse(User.FindFirstValue("UserId")); // Lấy UserId từ token
+        var query = new GetAllCategoryByUserIdQuery { UserId = userId };
+        var result = await _mediator.Send(query);
+        return Ok(result);
+    }
 }

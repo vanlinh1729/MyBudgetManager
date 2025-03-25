@@ -11,6 +11,7 @@ namespace MyBudgetManagement.Application.Features.AccountProfiles.Commands;
 
 public class UpdateAccountProfileCommand : IRequest<ApiResponse<Guid>>
 {
+    public Guid Id { get; set; }
     public Guid UserId { get; set; }
     public DateTime? DateOfBirth { get; set; }
     public string? Avatar { get; set; } 
@@ -36,16 +37,39 @@ public class UpdateAccountProfileCommand : IRequest<ApiResponse<Guid>>
             CancellationToken cancellationToken)
         {
             // Kiểm tra người dùng có tồn tại không
-            var result = await _userRepository.GetByIdAsync(request.UserId);
-            if (result == null)
+            var user = await _userRepository.GetByIdAsync(request.UserId);
+            if (user == null)
             {
                 throw new ApiException("User not found.");
             }
-            var accountProfile = _mapper.Map<AccountProfile>(request);
-            accountProfile.LastModifiedBy = request.UserId.ToString();
-            accountProfile.LastModified = DateTime.Now;
-            await _accountProfileRepository.UpdateAsync(accountProfile);
-            return new ApiResponse<Guid>(accountProfile.Id, "AccountProfile created successfully");
+
+            // Lấy AccountProfile hiện tại
+            var existingProfile = await _accountProfileRepository.GetAccountProfileByUserIdAsync(request.UserId);
+            if (existingProfile == null)
+            {
+                throw new ApiException("AccountProfile not found.");
+            }
+
+            // Tạo một entity mới với dữ liệu từ request
+            var updatedProfile = new AccountProfile
+            {
+                Id = existingProfile.Id,
+                UserId = existingProfile.UserId,
+                DateOfBirth = request.DateOfBirth,
+                Avatar = request.Avatar,
+                Address = request.Address,
+                Gender = request.Gender,
+                Currency = request.Currency,
+                // Giữ lại các giá trị gốc của các trường audit
+                CreatedBy = existingProfile.CreatedBy,
+                Created = existingProfile.Created,
+                LastModifiedBy = request.UserId.ToString(),
+                LastModified = DateTime.Now
+            };
+
+            await _accountProfileRepository.UpdateAsync(updatedProfile);
+            
+            return new ApiResponse<Guid>(updatedProfile.Id, "AccountProfile updated successfully");
         }
     }
 }

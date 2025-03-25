@@ -24,6 +24,8 @@ public class EmailService : IEmailService
     }
 
     public async Task SendEmailAsync(string to, string subject, string body)
+{
+    try
     {
         using var smtpClient = new SmtpClient(_smtpServer)
         {
@@ -38,5 +40,12 @@ public class EmailService : IEmailService
         };
 
         await smtpClient.SendMailAsync(mailMessage);
+        Console.WriteLine($"Email sent to {to} with subject: {subject}");
     }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error sending email to {to}: {ex.Message}");
+        throw; // Ném lại exception để xử lý tiếp nếu cần
+    }
+}
 }

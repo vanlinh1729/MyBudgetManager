@@ -10,13 +10,13 @@ namespace MyBudgetManagement.Application.Features.UserBalances.Queries;
 public class GetUserBalanceByUserIdQuery: IRequest<ApiResponse<UserBalance>>
 {
     public Guid UserId { get; set; }
-    
 }
-internal class GetUserBalanceByUserIdQueryHanler : IRequestHandler<GetUserBalanceByUserIdQuery, ApiResponse<UserBalance>>
+
+internal class GetUserBalanceByUserIdQueryHandler : IRequestHandler<GetUserBalanceByUserIdQuery, ApiResponse<UserBalance>>
 {
     private readonly IUserBalanceRepositoryAsync _userBalanceRepository;
 
-    public GetUserBalanceByUserIdQueryHanler(IUserBalanceRepositoryAsync userBalanceRepository)
+    public GetUserBalanceByUserIdQueryHandler(IUserBalanceRepositoryAsync userBalanceRepository)
     {
         _userBalanceRepository = userBalanceRepository;
     }
@@ -29,14 +29,14 @@ internal class GetUserBalanceByUserIdQueryHanler : IRequestHandler<GetUserBalanc
                 
             if (userBalance == null)
             {
-                return new ApiResponse<UserBalance>(null, (int)HttpStatusCode.NotFound +"UserBalance not found.");
+                return new ApiResponse<UserBalance>(null, (int)HttpStatusCode.NotFound + "UserBalance not found.");
             }
 
             return new ApiResponse<UserBalance>(userBalance, "Data fetched successfully.");
         }
         catch (Exception ex)
         {
-            // Log exception nếu cần
             return new ApiResponse<UserBalance>(null, (int)HttpStatusCode.InternalServerError + $"An unexpected error occurred: {ex.Message}");
-        }      }
+        }
+    }
 }

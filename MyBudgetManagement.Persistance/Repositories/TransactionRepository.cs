@@ -50,8 +50,12 @@ public class TransactionRepository : GenericRepository<Transaction>, ITransactio
 
     public async Task<IReadOnlyList<Transaction>> GetTransactionsByUserId(Guid userId)
     {
-        var transactions = await _context.Transactions
+        return await _dbcontext.Transactions
+            .Include(t => t.UserBalance)
+            .Include(t => t.Category)
             .Where(t => t.UserBalance.UserId == userId)
+            .OrderByDescending(t => t.Date)
+            .AsNoTracking()
             .ToListAsync();
-        return transactions;    }
+    }
 }

@@ -1,4 +1,4 @@
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using MyBudgetManagement.Application.Interfaces;
 using MyBudgetManagement.Domain.Entities;
 using MyBudgetManagement.Domain.Interfaces;
@@ -19,7 +19,10 @@ public class CategoryRepository : GenericRepository<Category>, ICategoryReposito
 
     public async Task<IEnumerable<Category>> GetCategoriesByUserId(Guid userId)
     {
-        var listCategories = await _context.Categories.Where(x => x.UserBalance.UserId == userId).ToListAsync();
-        return listCategories;
+        return await _dbcontext.Categories
+            .Include(c => c.UserBalance) // Include related data if needed
+            .Where(x => x.UserBalance.UserId == userId)
+            .AsNoTracking() // Optional: for better performance if you're only reading
+            .ToListAsync();
     }
 }

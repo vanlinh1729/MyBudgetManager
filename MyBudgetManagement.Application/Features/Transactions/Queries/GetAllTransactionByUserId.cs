@@ -1,3 +1,4 @@
+using System.Net;
 using MediatR;
 using MyBudgetManagement.Application.Exceptions;
 using MyBudgetManagement.Application.Wrappers;
@@ -6,7 +7,7 @@ using MyBudgetManagement.Domain.Interfaces;
 
 namespace MyBudgetManagement.Application.Features.Transactions.Queries;
 
-public class GetAllTransactionByUserId: IRequest<ApiResponse<IEnumerable<Transaction>>>
+public class GetAllTransactionByUserId : IRequest<ApiResponse<IEnumerable<Transaction>>>
 {
     public Guid UserId { get; set; }
 }
@@ -19,14 +20,26 @@ internal class GetAllTransactionByUserIdQueryHandler : IRequestHandler<GetAllTra
     {
         _transactionRepository = transactionRepository;
     }
+
     public async Task<ApiResponse<IEnumerable<Transaction>>> Handle(GetAllTransactionByUserId request, CancellationToken cancellationToken)
     {
-        var transaction = await _transactionRepository.GetTransactionsByUserId(request.UserId);
-        if (transaction==null)
+        try
         {
-            throw new ApiException("Transaction cannot found");
-        }
+            var transactions = await _transactionRepository.GetTransactionsByUserId(request.UserId);
+            
+            if (transactions == null || !transactions.Any())
+            {
+                return new ApiResponse<IEnumerable<Transaction>>(
+                    Enumerable.Empty<Transaction>(), 
+                    "No transactions found for this user."
+                );
+            }
 
-        return new ApiResponse<IEnumerable<Transaction>>(transaction);
+            return new ApiResponse<IEnumerable<Transaction>>(transactions, "Transactions retrieved successfully.");
+        }
+        catch (Exception ex)
+        {
+            throw new ApiException($"An error occurred while retrieving transactions: {ex.Message}");
+        }
     }
 }

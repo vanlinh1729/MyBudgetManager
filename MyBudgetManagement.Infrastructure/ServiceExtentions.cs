@@ -6,10 +6,11 @@ using Microsoft.IdentityModel.Tokens;
 using MyBudgetManagement.Application.Interfaces;
 using MyBudgetManagement.Domain.Interfaces;
 using MyBudgetManagement.Infrastructure.Authentication;
+using MyBudgetManagement.Infrastructure.FileStorage;
 
 namespace MyBudgetManagement.Infrastructure;
 
-public static class ServiceExtentions
+public static class ServiceExtensions
 {
     public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
@@ -17,8 +18,14 @@ public static class ServiceExtentions
         services.AddScoped<IJwtProvider, JwtProvider>();  
         services.AddScoped<IDataSeeder, DataSeeder>();
         services.AddScoped<IEmailService, EmailService.EmailService>();
-
-
+        services.AddScoped<IFileStorageService, CloudinaryService>();
+        
+        // Validate Cloudinary configuration
+        var cloudinarySection = configuration.GetSection("Cloudinary");
+        if (!cloudinarySection.Exists())
+        {
+            throw new Exception("Cloudinary configuration section is missing");
+        }
         services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

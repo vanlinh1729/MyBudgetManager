@@ -5,6 +5,8 @@ using MyBudgetManagement.Application.Features.UserBalances.Queries;
 using MyBudgetManagement.Application.Wrappers;
 using System;
 using System.Threading.Tasks;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MyBudgetManagement.API.Controllers
 {
@@ -42,6 +44,16 @@ namespace MyBudgetManagement.API.Controllers
         public async Task<IActionResult> CreateUserBalance([FromBody] CreateUserBalanceCommand command)
         {
             var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+
+        [Authorize(Roles = "User")]
+        [HttpGet("current")]
+        public async Task<IActionResult> GetCurrentUserBalance()
+        {
+            var userId = Guid.Parse(User.FindFirstValue("UserId")); // Lấy UserId từ token
+            var query = new GetUserBalanceByUserIdQuery { UserId = userId };
+            var result = await _mediator.Send(query);
             return Ok(result);
         }
 

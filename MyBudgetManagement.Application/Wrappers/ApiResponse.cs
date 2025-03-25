@@ -9,7 +9,7 @@ public class ApiResponse<T>
     //success response
     public ApiResponse(T data, string message = null)
     {
-        Succecced = true;
+        Succeeded = true;
         Message = message;
         Data = data;
     }
@@ -17,11 +17,11 @@ public class ApiResponse<T>
     //failed response
     public ApiResponse(string message)
     {
-        Succecced = true;
+        Succeeded = true;
         Message = message;
     }
 
-    public bool Succecced { get; set; }
+    public bool Succeeded { get; set; }
     public string Message { get; set; }
     public List<string> Errors { get; set; }
     public T Data { get; set; }

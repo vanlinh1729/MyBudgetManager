@@ -1,4 +1,4 @@
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using MyBudgetManagement.Application.Interfaces;
 using MyBudgetManagement.Domain.Entities;
 using MyBudgetManagement.Domain.Interfaces;
@@ -11,15 +11,16 @@ public class UserBalanceRepository : GenericRepository<UserBalance>, IUserBalanc
     private readonly IApplicationDbContext _context;
     private readonly ApplicationDbContext _dbcontext;
 
-    public UserBalanceRepository(ApplicationDbContext dbContext, IApplicationDbContext context, ApplicationDbContext dbcontext) : base(dbContext)
+    public UserBalanceRepository(ApplicationDbContext dbContext, IApplicationDbContext context) : base(dbContext)
     {
         _context = context;
-        _dbcontext = dbcontext;
+        _dbcontext = dbContext;
     }
 
     public async Task<UserBalance> GetUserBalanceByUserId(Guid userId)
     {
-        var userBalance = await _dbcontext.UserBalances.FirstOrDefaultAsync(x => x.UserId == userId);
-        return userBalance;
+        return await _dbcontext.UserBalances
+            .AsNoTracking()
+            .FirstOrDefaultAsync(x => x.UserId == userId);
     }
 }
