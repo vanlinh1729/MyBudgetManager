@@ -1,6 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using MyBudgetManagement.Application.Exceptions;
+using MyBudgetManagement.Application.Helpers;
 using MyBudgetManagement.Application.Interfaces;
 using MyBudgetManagement.Application.Wrappers;
 using MyBudgetManagement.Domain.Interfaces;
@@ -39,7 +40,7 @@ public class UploadAvatarCommand : IRequest<ApiResponse<string>>
                 throw new ApiException("No file uploaded");
             }
 
-            if (!IsImageFile(request.AvatarFile.FileName))
+            if (!ImageVerifier.IsImageFile(request.AvatarFile.FileName))
             {
                 throw new ApiException("Only image files are allowed");
             }
@@ -69,12 +70,6 @@ public class UploadAvatarCommand : IRequest<ApiResponse<string>>
             await _accountProfileRepository.UpdateAsync(profile);
 
             return new ApiResponse<string>(imageUrl, "Avatar uploaded successfully");
-        }
-
-        private bool IsImageFile(string fileName)
-        {
-            string[] allowedExtensions = { ".jpg", ".jpeg", ".png", ".gif" };
-            return allowedExtensions.Contains(Path.GetExtension(fileName).ToLower());
         }
     }
 }

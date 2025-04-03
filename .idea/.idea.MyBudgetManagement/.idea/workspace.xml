@@ -14,40 +14,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e70224e3-2a35-4c9d-a03f-d50d21743ac5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/DTOs/CategoryWithTotalDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/AccountProfiles/Commands/UploadAvatarCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/AccountProfiles/Queries/GetAccountProfileOfCurrentUserQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Interfaces/IFileStorageService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/FileStorage/CloudinaryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/FileStorage/LocalFileStorageService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Helpers/ImageVerifier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/AugmentWebviewStateStore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/AugmentWebviewStateStore.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/AccountProfileController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/AccountProfileController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/CategoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/CategoryController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/TransactionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/TransactionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/UserBalanceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Controllers/UserBalanceController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Logs/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Logs/logs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/MyBudgetManagement.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/MyBudgetManagement.API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.API/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/AccountProfiles/Commands/UpdateAccountProfileCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/AccountProfiles/Commands/UpdateAccountProfileCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Queries/GetAllCategoryByUserIdQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Categories/Queries/GetAllCategoryByUserIdQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/AccountProfiles/Commands/UploadAvatarCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/AccountProfiles/Commands/UploadAvatarCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Transactions/Commands/CreateTransactionCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Transactions/Commands/CreateTransactionCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Transactions/Queries/GetAllTransactionByUserId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Transactions/Queries/GetAllTransactionByUserId.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserBalances/Queries/GetUserBalanceByUserIdQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserBalances/Queries/GetUserBalanceByUserIdQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Mappings/MappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Mappings/MappingProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/MyBudgetManagement.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/MyBudgetManagement.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Wrappers/ApiResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Wrappers/ApiResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/Mailing/EmailService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/Mailing/EmailService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/MyBudgetManagement.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/MyBudgetManagement.Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/ServiceExtentions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/ServiceExtentions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/AccountProfileRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/AccountProfileRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/CategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/CategoryRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/TransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/TransactionRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/UserBalanceRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/UserBalanceRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Services/UserService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +54,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/261ea83c988816e3d8fe76b15b7ac6c10af64b8f9e739854f83c137c8ba9/SafeFileHandle.Windows.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4b21fc3f8a3abb5d25f06c622276fbec0fd3932f169cc6af520bf5abc6a46b4/DbSet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e096e6f12c5d6b49356bc34ff1ea08738f910c0929c9d717c9cba7f44288/EntityFrameworkQueryableExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../MyBudgetManagement.Application/DTOs/CategoryWithTotalDto.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../MyBudgetManagement.Application/DTOs/CategoryWithTotalDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../MyBudgetManagement.Application/Features/AccountProfiles/Commands/UploadAvatarCommand.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../MyBudgetManagement.Application/Interfaces/IFileStorageService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../MyBudgetManagement.Infrastructure/FileStorage/CloudinaryService.cs" root0="SKIP_HIGHLIGHTING" />
@@ -93,60 +67,6 @@
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/RoleRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Persistance/ServiceExtentions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -332,7 +252,10 @@
       <workItem from="1741436665565" duration="18800000" />
       <workItem from="1741942666849" duration="12536000" />
       <workItem from="1742262713520" duration="11368000" />
-      <workItem from="1742532534160" duration="42507000" />
+      <workItem from="1742532534160" duration="44147000" />
+      <workItem from="1743004236137" duration="8976000" />
+      <workItem from="1743267368808" duration="847000" />
+      <workItem from="1743306613051" duration="1304000" />
     </task>
     <servers />
   </component>

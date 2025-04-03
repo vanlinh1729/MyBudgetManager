@@ -24,7 +24,7 @@ namespace MyBudgetManagement.API.Controllers
 
         [Authorize(Roles = "User")]
         [HttpPost]
-        public async Task<IActionResult> CreateTransaction([FromBody] CreateTransactionCommand command)
+        public async Task<IActionResult> CreateTransaction( CreateTransactionCommand command)
         {
             try 
             {

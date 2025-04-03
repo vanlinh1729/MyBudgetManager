@@ -6,7 +6,9 @@ using MyBudgetManagement.Domain.Interfaces;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using MyBudgetManagement.Application.Exceptions;
+using MyBudgetManagement.Application.Helpers;
 using MyBudgetManagement.Application.Interfaces;
 
 namespace MyBudgetManagement.Application.Features.Transactions.Commands
@@ -16,7 +18,7 @@ namespace MyBudgetManagement.Application.Features.Transactions.Commands
         public Guid? CategoryId { get; set; }
         public decimal Amount { get; set; }
         public string Description { get; set; }
-        public string? Image { get; set; }
+        public IFormFile? ImageFile { get; set; }
         public TransactionType Type { get; set; }
         public DateTime Date { get; set; }
         
@@ -30,18 +32,22 @@ namespace MyBudgetManagement.Application.Features.Transactions.Commands
         private readonly IUserBalanceRepositoryAsync _userBalanceRepository;
         private readonly IApplicationDbContext _dbContext;
         private readonly ICategoryRepositoryAsync _categoryRepository;
+        private readonly IFileStorageService _fileStorageService;
 
 
-        public CreateTransactionCommandHandler(ITransactionRepositoryAsync transactionRepository, IUserBalanceRepositoryAsync userBalanceRepository, IApplicationDbContext dbContext, ICategoryRepositoryAsync categoryRepository)
+        public CreateTransactionCommandHandler(ITransactionRepositoryAsync transactionRepository, IUserBalanceRepositoryAsync userBalanceRepository, IApplicationDbContext dbContext, ICategoryRepositoryAsync categoryRepository, IFileStorageService fileStorageService)
         {
             _transactionRepository = transactionRepository;
             _userBalanceRepository = userBalanceRepository;
             _dbContext = dbContext;
             _categoryRepository = categoryRepository;
+            _fileStorageService = fileStorageService;
         }
 
         public async Task<ApiResponse<string>> Handle(CreateTransactionCommand request, CancellationToken cancellationToken)
         {
+            string imageUrl = null;
+
             using (var transaction = await _dbContext.Database.BeginTransactionAsync(cancellationToken))
             {
                 try
@@ -68,15 +74,34 @@ namespace MyBudgetManagement.Application.Features.Transactions.Commands
                             throw new ApiException("Transaction type does not match category type.");
                         }
                     }
+                    // Upload ảnh nếu có
+                    if (request.ImageFile != null && request.ImageFile.Length > 0)
+                    {
+                        if (!ImageVerifier.IsImageFile(request.ImageFile.FileName))
+                        {
+                            throw new ApiException("Only image files are allowed");
+                        }
+
+                        if (request.ImageFile.Length > 5 * 1024 * 1024) // 5MB limit
+                        {
+                            throw new ApiException("File size cannot exceed 5MB");
+                        }
+
+                        using var stream = new MemoryStream();
+                        await request.ImageFile.CopyToAsync(stream, cancellationToken);
+                        stream.Position = 0;
+                        
+                        imageUrl = await _fileStorageService.UploadFileAsync(stream, request.ImageFile.FileName);
+                    }
 
                     // Kiểm tra và cập nhật số dư
                     decimal newBalance;
                     if (request.Type == TransactionType.Expense)
                     {
-                        if (userBalance.Balance < request.Amount)
+                        /*if (userBalance.Balance < request.Amount)
                         {
                             throw new ApiException("Insufficient balance for this transaction.");
-                        }
+                        }*/
                         newBalance = userBalance.Balance - request.Amount;
                     }
                     else // Income
@@ -91,7 +116,7 @@ namespace MyBudgetManagement.Application.Features.Transactions.Commands
                         UserBalanceId = userBalance.Id,
                         Amount = request.Amount,
                         Description = request.Description,
-                        Image = request.Image,
+                        Image = imageUrl,
                         Type = request.Type,
                         Date = request.Date,
                         Created = DateTime.UtcNow,

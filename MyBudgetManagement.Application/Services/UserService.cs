@@ -340,6 +340,7 @@ public class UserService : IUserService
         }
     }
 
+    
     public async Task<UserDto> GetUserByEmailAsync(string email, CancellationToken cancellationToken = default)
     {
         try
