@@ -2,7 +2,7 @@ using MyBudgetManagement.Domain.Common;
 
 namespace MyBudgetManagement.Domain.Entities;
 
-public class Role : AuditableBaseEntity
+public class Role : BaseEntity
 {
     public string Name { get; set; }
     public int RoleBitMask { get; set; }
