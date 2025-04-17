@@ -12,4 +12,6 @@ public class Token : BaseEntity
     public DateTime CreatedAt { get; set; }
     public DateTime RevokedAt { get; set; }
     
+    //nav props
+    public virtual User User { get; set; }
 }

@@ -5,13 +5,13 @@ using MyBudgetManagement.Persistance.Context;
 
 namespace MyBudgetManagement.Persistance.Repositories;
 
-public class GroupRepository : GenericRepository<Group>, IGroupRepositoryAsync
+public class GroupRepositoryAsync : GenericRepositoryAsync<Group>, IGroupRepositoryAsync
 {
-    private readonly IApplicationDbContext _context;
+    private readonly ApplicationDbContext _dbContext;
 
-    public GroupRepository(ApplicationDbContext dbContext, IApplicationDbContext context) : base(dbContext)
+    public GroupRepositoryAsync(ApplicationDbContext dbContext) : base(dbContext)
     {
-        _context = context;
+        _dbContext = dbContext;
     }
 
     public async Task<IEnumerable<Group>> GetAllGroupByUserId(Guid userId)

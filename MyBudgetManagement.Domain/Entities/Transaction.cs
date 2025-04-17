@@ -14,5 +14,4 @@ public class Transaction : AuditableBaseEntity
     
     //nav props
     public virtual Category Category { get; set; }
-    public virtual UserBalance UserBalance { get; set; }
 }

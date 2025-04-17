@@ -17,14 +17,14 @@ public class LoginCommand: IRequest<ApiResponse<string>>
     {
         private readonly IJwtProvider _jwtProvider;
         private readonly IUserRepositoryAsync _userRepository;
-        private readonly IRefreshTokenRepository _refreshTokenRepository;
+        private readonly ITokenRepositoryAsync _tokenRepositoryAsync;
 
 
-        public LoginCommandHandler(IJwtProvider jwtProvider, IUserRepositoryAsync userRepository, IRefreshTokenRepository refreshTokenRepository)
+        public LoginCommandHandler(IJwtProvider jwtProvider, IUserRepositoryAsync userRepository, ITokenRepositoryAsync tokenRepositoryAsync)
         {
             _jwtProvider = jwtProvider;
             _userRepository = userRepository;
-            _refreshTokenRepository = refreshTokenRepository;
+            _tokenRepositoryAsync = tokenRepositoryAsync;
         }
 
         public async Task<ApiResponse<string>> Handle(LoginCommand request, CancellationToken cancellationToken)
@@ -39,7 +39,7 @@ public class LoginCommand: IRequest<ApiResponse<string>>
             // Tạo token JWT
             var token = _jwtProvider.GenerateToken(user);
             //tao refresh token, revoke rftken cu
-            var refreshToken = await _refreshTokenRepository.RevokeAndGenerateNewRefreshTokenAsync(user.Id);
+            var refreshToken = await _tokenRepositoryAsync.RevokeAndGenerateNewRefreshTokenAsync(user.Id);
             
             return new ApiResponse<string>(token, "Login successful");
         }

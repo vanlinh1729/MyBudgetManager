@@ -10,17 +10,17 @@ public class RefreshTokenCommand : IRequest<AuthResponse>
     public string RefreshToken { get; set; }
     internal class RefreshTokenHandler : IRequestHandler<RefreshTokenCommand, AuthResponse>
     {
-        private readonly IRefreshTokenRepository _refreshTokenRepository;
+        private readonly ITokenRepositoryAsync _tokenRepositoryAsync;
 
-        public RefreshTokenHandler(IRefreshTokenRepository refreshTokenRepository)
+        public RefreshTokenHandler(ITokenRepositoryAsync tokenRepositoryAsync)
         {
-            _refreshTokenRepository = refreshTokenRepository;
+            _tokenRepositoryAsync = tokenRepositoryAsync;
         }
 
         public async Task<AuthResponse> Handle(RefreshTokenCommand request, CancellationToken cancellationToken)
         {
-            var accessToken = await _refreshTokenRepository.RefreshAccessToken(request.RefreshToken);
-            var refreshToken = await _refreshTokenRepository.RefreshToken(request.RefreshToken);
+            var accessToken = await _tokenRepositoryAsync.RefreshAccessToken(request.RefreshToken);
+            var refreshToken = await _tokenRepositoryAsync.RefreshToken(request.RefreshToken);
 
             return new AuthResponse(accessToken, refreshToken);
         }

@@ -12,24 +12,22 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
         
     }
 
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<DebtAndLoan> DebtAndLoans { get; set; }
+    public DbSet<DebtAndLoanContact> DebtAndLoanContacts { get; set; }
+    public DbSet<Group> Groups { get; set; }
+    public DbSet<GroupExpense> GroupExpenses { get; set; }
+    public DbSet<GroupExpenseShare> GroupExpenseShares { get; set; }
+    public DbSet<GroupInvitation> GroupInvitations { get; set; }
+    public DbSet<GroupMember> GroupMembers { get; set; }
+    public DbSet<GroupMessage> GroupMessages { get; set; }
+    public DbSet<Notification> Notifications { get; set; }
+    public DbSet<Permission> Permissions { get; set; }
+    public DbSet<Role> Roles { get; set; }
+    public DbSet<RolePermission> RolePermissions { get; set; }
+    public DbSet<Token> Tokens { get; set; }
+    public DbSet<Transaction> Transactions { get; set; }
     public DbSet<User> Users { get; set; }
     public DbSet<UserBalance> UserBalances { get; set; }
-    public DbSet<Transaction> Transactions { get; set; }
-    public DbSet<Role> Roles { get; set; }
     public DbSet<UserRole> UserRoles { get; set; }
-    public DbSet<Permission> Permissions { get; set; }
-    public DbSet<GroupTransaction> GroupTransactions { get; set; }
-    public DbSet<GroupBalance> GroupBalances { get; set; }
-    public DbSet<GroupMember> GroupMembers { get; set; }
-    public DbSet<Group> Groups { get; set; }
-    public DbSet<Category> Categories { get; set; }
-    public DbSet<AccountProfile> AccountProfiles { get; set; }
-    public DbSet<RefreshToken> RefreshTokens { get; set; }
-    public DatabaseFacade Database => base.Database;
-
-
-    public async Task<int> SaveChangesAsync()
-    {
-        return await base.SaveChangesAsync();
-    }
 }

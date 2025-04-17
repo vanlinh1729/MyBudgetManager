@@ -14,4 +14,7 @@ public class GroupExpense : BaseEntity
     public GroupExpenseStatus Status { get; set; }
     public string? Note { get; set; }
 
+    // Navigation properties
+    public virtual Group Group { get; set; }
+    public virtual GroupMember GroupMember { get; set; }
 }

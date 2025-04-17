@@ -7,29 +7,29 @@ using MyBudgetManagement.Persistance.Context;
 namespace MyBudgetManagement.Persistance.Repositories;
 
 
-public class RefreshTokenRepository : IRefreshTokenRepository
+public class TokenRepositoryAsync : ITokenRepositoryAsync
 {
     private readonly ApplicationDbContext _context;
     private readonly IJwtProvider _jwtProvider;
 
-    public RefreshTokenRepository(ApplicationDbContext context, IJwtProvider jwtProvider)
+    public TokenRepositoryAsync(ApplicationDbContext context, IJwtProvider jwtProvider)
     {
         _context = context;
         _jwtProvider = jwtProvider;
     }
 
-    public async Task<RefreshToken> GetByToken(string token) =>
-        await _context.RefreshTokens.FirstOrDefaultAsync(rt => rt.Token == token);
+    public async Task<Token> GetByToken(string token) =>
+        await _context.Tokens.FirstOrDefaultAsync(rt => rt.Token == token);
 
-    public async Task SaveToken(RefreshToken token)
+    public async Task SaveToken(Token token)
     {
-        _context.RefreshTokens.Add(token);
+        _context.Tokens.Add(token);
         await _context.SaveChangesAsync();
     }
     
     public async Task<bool> RevokeToken(Guid userId, CancellationToken cancellationToken = default)
     {
-        var oldRefreshToken = await _context.RefreshTokens
+        var oldRefreshToken = await _context.Tokens
             .FirstOrDefaultAsync(rt => rt.UserId == userId && rt.RevokedAt == null && rt.ExpiryDate > DateTime.UtcNow, cancellationToken);
 
         if (oldRefreshToken == null)
@@ -47,7 +47,7 @@ public class RefreshTokenRepository : IRefreshTokenRepository
     public async Task<string> RevokeAndGenerateNewRefreshTokenAsync(Guid userId)
     {
         await RevokeToken(userId);
-        var refreshToken = new RefreshToken
+        var refreshToken = new Token
         {
             Id = Guid.NewGuid(),
             UserId = userId,

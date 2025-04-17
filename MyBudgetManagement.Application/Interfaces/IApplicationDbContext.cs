@@ -7,21 +7,22 @@ namespace MyBudgetManagement.Application.Interfaces;
 
 public interface IApplicationDbContext
 {
-    DbSet<User> Users { get; set; } 
-    DbSet<UserBalance> UserBalances { get; set; } 
-    DbSet<Transaction> Transactions { get; set; } 
-    DbSet<Role> Roles { get; set; }
-    DbSet<UserRole> UserRoles { get; set; }
-    
-    public DbSet<Permission> Permissions { get; set; }
-
-    DbSet<GroupTransaction> GroupTransactions { get; set; }
-    public DbSet<GroupBalance> GroupBalances { get; set; }
-    DbSet<GroupMember> GroupMembers { get; set; }
-    DbSet<Group> Groups { get; set; }
     DbSet<Category> Categories { get; set; }
-    DbSet<AccountProfile> AccountProfiles { get; set; }
-    DbSet<RefreshToken> RefreshTokens { get; set; }
-    Task<int> SaveChangesAsync();
-    DatabaseFacade Database { get;}
+    DbSet<DebtAndLoan> DebtAndLoans { get; set; }
+    DbSet<DebtAndLoanContact> DebtAndLoanContacts { get; set; }
+    DbSet<Group> Groups { get; set; }
+    DbSet<GroupExpense> GroupExpenses { get; set; }
+    DbSet<GroupExpenseShare> GroupExpenseShares { get; set; }
+    DbSet<GroupInvitation> GroupInvitations { get; set; }
+    DbSet<GroupMember> GroupMembers { get; set; }
+    DbSet<GroupMessage> GroupMessages { get; set; }
+    DbSet<Notification> Notifications { get; set; }
+    DbSet<Permission> Permissions { get; set; }
+    DbSet<Role> Roles { get; set; }
+    DbSet<RolePermission> RolePermissions { get; set; }
+    DbSet<Token> Tokens { get; set; }
+    DbSet<Transaction> Transactions { get; set; }
+    DbSet<User> Users { get; set; }
+    DbSet<UserBalance> UserBalances { get; set; }
+    DbSet<UserRole> UserRoles { get; set; }
 }

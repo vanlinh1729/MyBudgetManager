@@ -20,20 +20,17 @@ public static class ServiceExtentions
 
         
         services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
-        services.AddScoped<IUserRepositoryAsync, UserRepository>();  
-        services.AddScoped<IUserBalanceRepositoryAsync, UserBalanceRepository>();  
-        services.AddScoped<IUserRoleRepositoryAsync, UserRoleRepository>();  
-        services.AddScoped<ITransactionRepositoryAsync, TransactionRepository>();  
-        services.AddScoped<ICategoryRepositoryAsync, CategoryRepository>();  
-        services.AddScoped<IAccountProfileRepositoryAsync, AccountProfileRepository>();  
-        services.AddScoped<IRoleRepositoryAsync, RoleRepository>();  
-        services.AddScoped<IPermissionRepositoryAsync, PermissionRepository>();  
-        services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();  
-        services.AddScoped<IGroupBalanceRepositoryAsync, GroupBalanceRepository>();  
-        services.AddScoped<IGroupRepositoryAsync, GroupRepository>();  
-        services.AddScoped<IGroupMemberRepositoryAsync, GroupMemberRepository>();  
-        services.AddScoped<IGroupTransactionRepositoryAsync, GroupTransactionRepository>();  
-        services.AddScoped<IGroupCategoryRepositoryAsync, GroupCategoryRepository>();  
+        services.AddScoped<IUserRepositoryAsync, UserRepositoryAsync>();  
+        services.AddScoped<IUserBalanceRepositoryAsync, UserBalanceRepositoryAsync>();  
+        services.AddScoped<IUserRoleRepositoryAsync, UserRoleRepositoryAsync>();  
+        services.AddScoped<ITransactionRepositoryAsync, TransactionRepositoryAsync>();  
+        services.AddScoped<ICategoryRepositoryAsync, CategoryRepositoryAsync>();  
+        services.AddScoped<IRoleRepositoryAsync, RoleRepositoryAsync>();  
+        services.AddScoped<IPermissionRepositoryAsync, PermissionRepositoryAsync>();  
+        services.AddScoped<ITokenRepositoryAsync, TokenRepositoryAsync>();  
+        services.AddScoped<IGroupRepositoryAsync, GroupRepositoryAsync>();  
+        services.AddScoped<IGroupMemberRepositoryAsync, GroupMemberRepositoryAsync>();  
+        services.AddScoped<IGroupExpenseRepositoryAsync, GroupExpenseRepositoryAsync>();  
         
     }
 }

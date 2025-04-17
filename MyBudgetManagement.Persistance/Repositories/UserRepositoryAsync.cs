@@ -7,29 +7,48 @@ using MyBudgetManagement.Persistance.Context;
 
 namespace MyBudgetManagement.Persistance.Repositories;
 
-public class UserRepository : GenericRepository<User>, IUserRepositoryAsync
+public class UserRepositoryAsync : GenericRepositoryAsync<User>, IUserRepositoryAsync
 {
-    private readonly IApplicationDbContext _context;
-    private readonly ApplicationDbContext _dbcontext;
+    private readonly ApplicationDbContext _dbContext;
 
-    public UserRepository(IApplicationDbContext dbContext,ApplicationDbContext _dbcontext) : base(_dbcontext)
+    public UserRepositoryAsync(ApplicationDbContext dbContext) : base(dbContext)
     {
-        _context = dbContext;
+        _dbContext = dbContext;
     }
 
     public async Task<User?> GetUserByEmailAsync(string email)
     {
-        return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+        return await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == email);
+    }
+
+    public Task<User> GetByEmailAsync(string email)
+    {
+        throw new NotImplementedException();
     }
 
     public async Task<User?> GetUserByUserBalanceAsync(Guid userBalanceId)
     {
-        return await _context.Users.FirstOrDefaultAsync(u => u.UserBalance.Id == userBalanceId);
+        return await _dbContext.Users.FirstOrDefaultAsync(u => u.UserBalance.Id == userBalanceId);
+    }
+
+    public Task<bool> IsEmailUniqueAsync(string email)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<IEnumerable<User>> GetUsersByRoleAsync(string roleName)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<User> GetUserWithDetailsAsync(Guid userId)
+    {
+        throw new NotImplementedException();
     }
 
     public async Task<User?> UserLogin(string email, string password)
     {
-        var user = await _context.Users
+        var user = await _dbContext.Users
             .Include(u => u.UserRoles)
             .ThenInclude(ur => ur.Role)
             .Include(u => u.UserBalance)

@@ -14,4 +14,8 @@ public class DebtAndLoan : BaseEntity
     public DateTime PaymentDate { get; set; }
     public PaymentStatus Status { get; set; }
     public string Note { get; set; }   
+    //nav props
+    public virtual Category Category { get; set; }
+    public virtual DebtAndLoanContact DebtAndLoanContact { get; set; }
+    
 }

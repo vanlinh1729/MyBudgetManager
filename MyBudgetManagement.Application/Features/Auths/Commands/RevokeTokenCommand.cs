@@ -10,16 +10,16 @@ public class RevokeTokenCommand : IRequest<ApiResponse<string>>
     public Guid UserId { get; set; }
     internal class RevokeTokenCommandHandler : IRequestHandler<RevokeTokenCommand, ApiResponse<string>>
     {
-        private readonly IRefreshTokenRepository _refreshTokenRepository;
+        private readonly ITokenRepositoryAsync _tokenRepositoryAsync;
 
-        public RevokeTokenCommandHandler(IRefreshTokenRepository refreshTokenRepository)
+        public RevokeTokenCommandHandler(ITokenRepositoryAsync tokenRepositoryAsync)
         {
-            _refreshTokenRepository = refreshTokenRepository;
+            _tokenRepositoryAsync = tokenRepositoryAsync;
         }
 
         public async Task<ApiResponse<string>> Handle(RevokeTokenCommand request, CancellationToken cancellationToken)
         {
-            await _refreshTokenRepository.RevokeToken(request.UserId);
+            await _tokenRepositoryAsync.RevokeToken(request.UserId);
             return new ApiResponse<string>("Revoke refreshtoken successfully");
         }
     }

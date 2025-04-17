@@ -12,7 +12,7 @@ public class User : AuditableBaseEntity
     public string FullName { get; set; }
     public string? Avatar { get; set; }
     public string[]? Roles { get; set; }
-    public Gender Gender { get; set; }
+    public Gender Gender { get; set; } 
     public DateTime DateOfBirth { get; set; }
     public string? PhoneNumber { get; set; }
     public DateTime LastChangePassword { get; set; }
@@ -24,4 +24,8 @@ public class User : AuditableBaseEntity
     public virtual UserBalance UserBalance { get; set; } // 1user co 1 ub
     
     public virtual ICollection<GroupMember> GroupMembers { get; set; } = new List<GroupMember>();
+    public virtual ICollection<Notification> ReceivedNotifications { get; set; } = new List<Notification>();
+    public virtual ICollection<Notification> SentNotifications { get; set; } = new List<Notification>();
+    public virtual ICollection<GroupInvitation> SentInvitations { get; set; } = new List<GroupInvitation>();
+    public virtual ICollection<GroupInvitation> ReceivedInvitations { get; set; } = new List<GroupInvitation>();
 }

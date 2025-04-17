@@ -10,11 +10,11 @@ public class LogoutCommand : IRequest<ApiResponse<string>>
     
     internal class LogoutCommandHandler : IRequestHandler<LogoutCommand, ApiResponse<string>>
     {
-        private readonly IRefreshTokenRepository _refreshTokenRepository;
+        private readonly ITokenRepositoryAsync _tokenRepositoryAsync;
 
-        public LogoutCommandHandler(IRefreshTokenRepository refreshTokenRepository)
+        public LogoutCommandHandler(ITokenRepositoryAsync tokenRepositoryAsync)
         {
-            _refreshTokenRepository = refreshTokenRepository ?? throw new ArgumentNullException(nameof(refreshTokenRepository));
+            _tokenRepositoryAsync = tokenRepositoryAsync ?? throw new ArgumentNullException(nameof(tokenRepositoryAsync));
         }
 
         public async Task<ApiResponse<string>> Handle(LogoutCommand request, CancellationToken cancellationToken)
@@ -26,7 +26,7 @@ public class LogoutCommand : IRequest<ApiResponse<string>>
 
             try
             {
-                var revoked = await _refreshTokenRepository.RevokeToken(request.UserId, cancellationToken);
+                var revoked = await _tokenRepositoryAsync.RevokeToken(request.UserId, cancellationToken);
 
                 if (!revoked)
                 {

@@ -14,4 +14,9 @@ public class DebtAndLoanContact : BaseEntity
     public string PhoneNumber { get; set; }
     public string Address { get; set; }
     public string Note { get; set; }
+    
+    //nav props
+    // nav props
+    public virtual ICollection<DebtAndLoan> DebtAndLoans { get; set; } = new List<DebtAndLoan>();
+
 }

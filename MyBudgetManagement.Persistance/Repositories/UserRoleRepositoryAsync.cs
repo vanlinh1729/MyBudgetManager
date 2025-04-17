@@ -8,37 +8,38 @@ using MyBudgetManagement.Persistance.Context;
 
 namespace MyBudgetManagement.Persistance.Repositories;
 
-public class UserRoleRepository : GenericRepository<UserRole>, IUserRoleRepositoryAsync
+public class UserRoleRepositoryAsync : GenericRepositoryAsync<UserRole>, IUserRoleRepositoryAsync
 {
-    private readonly IApplicationDbContext _context;
-    public UserRoleRepository(ApplicationDbContext dbContext, IApplicationDbContext context) : base(dbContext)
+    private readonly ApplicationDbContext _dbContext;
+    
+    public UserRoleRepositoryAsync(ApplicationDbContext dbContext) : base(dbContext)
     {
-        _context = context;
+        _dbContext = dbContext;
     }
 
     public async Task<List<UserRole>> GetUserRolesByUserIdAsync(Guid userId)
     {
-        return await _context.UserRoles.Where(x=>x.UserId==userId).ToListAsync();
+        return await _dbContext.UserRoles.Where(x=>x.UserId==userId).ToListAsync();
     }
 
     public async Task<List<UserRole>> GetUserRolesByRoleIdAsync(Guid roleId)
     {
-        return await _context.UserRoles.Where(x=>x.RoleId==roleId).ToListAsync();
+        return await _dbContext.UserRoles.Where(x=>x.RoleId==roleId).ToListAsync();
     }
 
     public async Task DeleteUserRoleAsync(Guid userId, Guid roleId)
     {
-        var userRole = await _context.UserRoles.Where(x=>x.UserId == userId && x.UserId == roleId).FirstOrDefaultAsync();
+        var userRole = await _dbContext.UserRoles.Where(x=>x.UserId == userId && x.UserId == roleId).FirstOrDefaultAsync();
         if (userRole != null)
         {
-            _context.UserRoles.Remove(userRole);
-            await _context.SaveChangesAsync();
+            _dbContext.UserRoles.Remove(userRole);
+            await _dbContext.SaveChangesAsync();
         }
     }
 
     public async Task<bool> UpdateUserRoleAsync(Guid userId, Guid roleId)
     {
-        var userRole = await _context.UserRoles
+        var userRole = await _dbContext.UserRoles
             .FirstOrDefaultAsync(ur => ur.UserId == userId);
 
         if (userRole == null)
@@ -47,7 +48,7 @@ public class UserRoleRepository : GenericRepository<UserRole>, IUserRoleReposito
         }
 
         userRole.RoleId = roleId;
-        _context.UserRoles.Update(userRole);
-        return await _context.SaveChangesAsync() > 0;
+        _dbContext.UserRoles.Update(userRole);
+        return await _dbContext.SaveChangesAsync() > 0;
     }
 }
