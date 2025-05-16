@@ -14,81 +14,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e70224e3-2a35-4c9d-a03f-d50d21743ac5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Interfaces/IUnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/GroupInvitation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Notification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Enums/GroupExpenseShareStatus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Enums/NotificationType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Enums/RelatedEntityType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IDebtAndLoanContactRepositoryAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IDebtAndLoanRepositoryAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IGroupExpenseShareRepositoryAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IGroupInvitationRepositoryAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IGroupMessageRepositoryAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/INotificationRepositoryAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IRolePermissionRepositoryAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/DebtAndLoanContactRepositoryAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/DebtAndLoanRepositoryAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GenericRepositoryAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GroupExpenseShareRepositoryAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GroupInvitationRepositoryAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GroupMessageRepositoryAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/NotificationRepositoryAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/RolePermissionRepositoryAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/UnitOfWork/UnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/AugmentWebviewStateStore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/AugmentWebviewStateStore.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudgetManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Auths/Commands/LoginCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Auths/Commands/LoginCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Auths/Commands/LogoutCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Auths/Commands/LogoutCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Auths/Commands/RefreshTokenCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Auths/Commands/RefreshTokenCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Auths/Commands/RevokeTokenCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Features/Auths/Commands/RevokeTokenCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Application/Interfaces/IApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Application/Interfaces/IApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Category.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/ChatMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/GroupMessage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/DebtAndLoan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/DebtAndLoan.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/DebtAndLoanContact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/DebtAndLoanContact.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Group.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Group.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/GroupExpense.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/GroupExpense.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/GroupExpenseShare.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/GroupExpenseShare.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/GroupMember.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/GroupMember.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Permission.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Permission.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Role.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Role.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/RolePermission.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/RolePermission.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Token.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Token.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Transaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Transaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/RolePermission.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/UserBalance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/UserBalance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Enums/AccountStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Enums/AccountStatus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IAccountProfileRepositoryAsync.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/ICategoryRepositoryAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/ICategoryRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IGroupBalanceRepositoryAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IGroupExpenseRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IGroupCategoryRepositoryAsync.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IGroupTransactionRepositoryAsync.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IRefreshTokenRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/ITokenRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/ITransactionRepositoryAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/ITransactionRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IUserBalanceRepositoryAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IUserBalanceRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IUserRepositoryAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IUserRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/Authentication/JwtProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Infrastructure/Auths/JwtProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/UserRole.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/IGenericRepositoryAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/IGenericRepositoryAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IRolePermissionRepositoryAsync.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Domain/Interfaces/Repositories/IUserRoleRepositoryAsync.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Context/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Context/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/AccountProfileRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/CategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/CategoryRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GenericRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GroupBalanceRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GroupCategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GroupExpenseRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GroupMemberRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GroupMemberRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GroupRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GroupRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GroupTransactionRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/PermissionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/PermissionRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/RefreshTokenRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/TokenRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/RoleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/RoleRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/TransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/TransactionRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/UserBalanceRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/UserBalanceRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/UserRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/UserRoleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/UserRoleRepositoryAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/ServiceExtentions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/ServiceExtentions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GenericRepositoryAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.Persistance/Repositories/GenericRepositoryAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudgetManagement.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudgetManagement.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,12 +55,19 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/d1f720815af0429b9e2c10442e951db71fe00/5b/2820b371/02000021pdb1.il" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/fccb29bd96a448cfbaf6147c83e0075d1d200/6c/a6911f25/02000007pdb76.il" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/243a037ca7a04510a506adfdd94befbac90930/57/14142013/IEnumerable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/243a037ca7a04510a506adfdd94befbac90930/5a/b06797ca/IEnumerable`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/243a037ca7a04510a506adfdd94befbac90930/6f/f4e1cdfe/IDisposable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9762d0dfd8b94fc9b8ab9b4aa102485328f220/9a/aa3212a0/IDbContextServices.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/261ea83c988816e3d8fe76b15b7ac6c10af64b8f9e739854f83c137c8ba9/SafeFileHandle.Windows.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/928cd69834286a3c5f1c267ab5b48967b98b83dd94bfd9320feaec1c06cbef6/DbContextLease.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a0b45f29f34f594814a7b1fbc25fe5ef3c18257956ed4f4fbfa68717db58/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce38294d3ded21936af3626c67ab281ac4b23cf51a5b6e1d8b1f81a045c8/GC.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e74c29b9b88b6bc79d45c8ecf5f99fb6781203f77d1554ecb64e2d022ab6d4a/GC.CoreCLR.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../MyBudgetManagement.Application/DTOs/CategoryWithTotalDto.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserBalances/Queries/GetAllUserBalanceQuery.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Application/Features/UserRoles/Queries/GetUserRoleByRoleIdQuery.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Category.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/RolePermission.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Token.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/Transaction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudgetManagement.Domain/Entities/UserBalance.cs" root0="FORCE_HIGHLIGHTING" />
@@ -324,7 +269,9 @@
       <workItem from="1743306613051" duration="1304000" />
       <workItem from="1744177083649" duration="402000" />
       <workItem from="1744724146325" duration="3138000" />
-      <workItem from="1744762566049" duration="12059000" />
+      <workItem from="1744762566049" duration="12892000" />
+      <workItem from="1746784853523" duration="4509000" />
+      <workItem from="1747189029974" duration="23383000" />
     </task>
     <servers />
   </component>

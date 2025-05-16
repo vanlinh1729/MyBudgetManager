@@ -1,3 +1,4 @@
+using System.Collections;
 using LinqKit;
 using System.Linq.Dynamic.Core;
 using System.Linq.Expressions;
@@ -21,7 +22,7 @@ public class GenericRepositoryAsync<T> : IGenericRepositoryAsync<T> where T : cl
         return await _dbContext.Set<T>().FindAsync(id);
     }
 
-    public async Task<IReadOnlyList<T>> GetAllAsync()
+    public async Task<IEnumerable<T>> GetAllAsync()
     {
         return await _dbContext.Set<T>().AsNoTracking().ToListAsync();
     }
@@ -45,10 +46,20 @@ public class GenericRepositoryAsync<T> : IGenericRepositoryAsync<T> where T : cl
         // Không gọi SaveChanges ở đây
     }
 
+    public Task<bool> ExistsAsync(Guid id)
+    {
+        throw new NotImplementedException();
+    }
+
     public async Task BulkInsertAsync(IEnumerable<T> entities)
     {
         await _dbContext.Set<T>().AddRangeAsync(entities);
         // Không gọi SaveChanges ở đây
+    }
+
+    public Task<Domain.Common.PagedResult<T>> GetPagedAsync(Expression<Func<T, bool>>? filter = null, Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null, int pageNumber = 1, int pageSize = 10)
+    {
+        throw new NotImplementedException();
     }
 
     public async Task<IReadOnlyList<T>> GetPagedReponseAsync(int pageNumber, int pageSize)

@@ -12,13 +12,11 @@ public class UnitOfWork : IUnitOfWork
     private readonly ApplicationDbContext _dbContext;
     private IUserRepositoryAsync _userRepository;
     private IUserBalanceRepositoryAsync _userBalanceRepository;
-    private IUserRoleRepositoryAsync _userRoleRepository;
     private ITransactionRepositoryAsync _transactionRepository;
     private ICategoryRepositoryAsync _categoryRepository;
     private IDebtAndLoanRepositoryAsync _debtAndLoanRepository;
     private IDebtAndLoanContactRepositoryAsync _debtAndLoanContactRepository;
     private IRoleRepositoryAsync _roleRepository;
-    private IRolePermissionRepositoryAsync _rolePermissionRepository;
     private IPermissionRepositoryAsync _permissionRepository;
     private ITokenRepositoryAsync _tokenRepository;
     private IGroupRepositoryAsync _groupRepository;
@@ -41,9 +39,6 @@ public class UnitOfWork : IUnitOfWork
     public IUserBalanceRepositoryAsync UserBalances => 
         _userBalanceRepository ??= new UserBalanceRepositoryAsync(_dbContext);
     
-    public IUserRoleRepositoryAsync UserRoles => 
-        _userRoleRepository ??= new UserRoleRepositoryAsync(_dbContext);
-    
     public ITransactionRepositoryAsync Transactions => 
         _transactionRepository ??= new TransactionRepositoryAsync(_dbContext);
     
@@ -58,9 +53,6 @@ public class UnitOfWork : IUnitOfWork
     
     public IRoleRepositoryAsync Roles => 
         _roleRepository ??= new RoleRepositoryAsync(_dbContext);
-    
-    public IRolePermissionRepositoryAsync RolePermissions => 
-        _rolePermissionRepository ??= new RolePermissionRepositoryAsync(_dbContext);
     
     public IPermissionRepositoryAsync Permissions => 
         _permissionRepository ??= new PermissionRepositoryAsync(_dbContext);

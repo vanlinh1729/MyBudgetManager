@@ -1,24 +1,28 @@
+using System.Linq.Expressions;
 using LinqKit;
+using MyBudgetManagement.Domain.Common;
 
 namespace MyBudgetManagement.Domain.Interfaces;
 
 public interface IGenericRepositoryAsync<T> where T : class
 {
-    Task<T> GetByIdAsync(Guid id);
+    Task<T?> GetByIdAsync(Guid id);
 
-    Task<IReadOnlyList<T>> GetAllAsync();
+    Task<IEnumerable<T>> GetAllAsync();
 
     Task<T> AddAsync(T entity);
 
     Task UpdateAsync(T entity);
 
     Task DeleteAsync(T entity);
+    Task<bool> ExistsAsync(Guid id);
+
     
     Task BulkInsertAsync(IEnumerable<T> entities);
-
-    Task<IReadOnlyList<T>> GetPagedReponseAsync(int pageNumber, int pageSize);
-
-    Task<IReadOnlyList<T>> GetPagedAdvancedReponseAsync(int pageNumber, int pageSize, string orderBy, string fields, ExpressionStarter<T> predicate);
-
-    Task<IReadOnlyList<dynamic>> GetAllShapeAsync(string orderBy, string fields);
+    
+    Task<PagedResult<T>> GetPagedAsync(
+        Expression<Func<T, bool>>? filter = null,
+        Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
+        int pageNumber = 1,
+        int pageSize = 10);
 }

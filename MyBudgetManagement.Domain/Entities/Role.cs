@@ -7,6 +7,6 @@ public class Role : BaseEntity
     public string Name { get; set; }
 
     //nav props
-    public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
-    public virtual ICollection<RolePermission> RolePermissions { get; set; } = new List<RolePermission>();
+    public virtual ICollection<User> Users { get; set; } = new List<User>();
+    public virtual ICollection<Permission> Permissions { get; set; } = new List<Permission>();
 }

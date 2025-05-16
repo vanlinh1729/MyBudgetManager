@@ -6,14 +6,11 @@ public interface IUnitOfWork : IDisposable
 {
     IUserRepositoryAsync Users { get; }
     IUserBalanceRepositoryAsync UserBalances { get; }
-    IUserRoleRepositoryAsync UserRoles { get; }
     ITransactionRepositoryAsync Transactions { get; }
     ICategoryRepositoryAsync Categories { get; }
     IDebtAndLoanRepositoryAsync DebtAndLoans { get; }
     IDebtAndLoanContactRepositoryAsync DebtAndLoanContacts { get; }
     IRoleRepositoryAsync Roles { get; }
-    IRolePermissionRepositoryAsync RolePermissions { get; }
-    
     IPermissionRepositoryAsync Permissions { get; }
     ITokenRepositoryAsync Tokens { get; }
     IGroupRepositoryAsync Groups { get; }

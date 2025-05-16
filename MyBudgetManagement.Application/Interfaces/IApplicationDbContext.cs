@@ -19,10 +19,8 @@ public interface IApplicationDbContext
     DbSet<Notification> Notifications { get; set; }
     DbSet<Permission> Permissions { get; set; }
     DbSet<Role> Roles { get; set; }
-    DbSet<RolePermission> RolePermissions { get; set; }
     DbSet<Token> Tokens { get; set; }
     DbSet<Transaction> Transactions { get; set; }
     DbSet<User> Users { get; set; }
     DbSet<UserBalance> UserBalances { get; set; }
-    DbSet<UserRole> UserRoles { get; set; }
 }
